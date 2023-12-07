@@ -11,7 +11,7 @@ Various features will be added as the project develops.
 |Files creation| | | x |
 |Git| | | x |
 | |
-|Homepage: header and footer| x | | |
+|Homepage: header and footer| | x | |
 |Homepage: home/hero| x | | |
 |Homepage: list of travel locations| x | | |
 |Homepage: map| x | | |
