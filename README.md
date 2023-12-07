@@ -1,8 +1,26 @@
-# React + Vite
+# FANCY A TRIP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the project for the first front-end part of the full stack web development course.
+The goal for this project is to build a Travel Blog with **HTML**, **CSS**, and **JavaScript** / **React**.
 
-Currently, two official plugins are available:
+Various features will be added as the project develops.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+|TASK|PLANNED|WORK IN PROGRESS|DONE
+|-|-|-|-|
+|Blog name| | | x |
+|Files creation| | | x |
+|Git| | | x |
+| |
+|Homepage: header and footer| x | | |
+|Homepage: home/hero| x | | |
+|Homepage: list of travel locations| x | | |
+|Homepage: map| x | | |
+| |
+|Detailed travel location page: home| x | | |
+|Detailed travel location page: slideshow of images| x | | |
+|Detailed travel location page: description of travel| x | | |
+|Detailed travel location page: weather| x | | |
+| |
+|New travel location page: form| x | | |
+| |
+|Traveler/author page: personal info| x | | |
