@@ -1,6 +1,7 @@
 # FANCY A TRIP
+## Diogo Lima
 
-This is the project for the first front-end part of the full stack web development course.
+This is the project for the first half of the full stack web development course: **front-end**.
 The goal for this project is to build a Travel Blog with **HTML**, **CSS**, and **JavaScript** / **React**.
 
 Various features will be added as the project develops.
