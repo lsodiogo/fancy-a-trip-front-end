@@ -1,105 +1,38 @@
+import { Route, Switch } from "wouter"
+
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+
+import HomeView from "./views/HomeView"
+import NewLocationView from "./views/NewLocationView"
+import AboutView from "./views/AboutView"
+import NotFoundView from "./views/NotFoundView"
+
 function App() {
 
   return (
     <>
-      <header className="header">
-        <a className="header-left" href="#">FANCY A TRIP</a>
+      <Header/>
 
-        <div className="header-right">
-          <a className="active" href="#">
-            <img src="images/home.svg" alt="home-icon"/>
-            <span> HOME</span>
-          </a>
+      <Switch>
+        <Route path="/">
+          <HomeView/>
+        </Route>
 
-          <a href="#">
-            <img src="images/file.svg" alt="file-icon"/>
-            <span> ADD LOCATION</span>
-          </a>
+        <Route path="/newLocation">
+          <NewLocationView/>
+        </Route>
 
-          <a href="#">
-            <img src="images/user.svg" alt="user-icon"/>
-            <span> ABOUT</span>
-          </a>
-        </div>
-      </header>
+        <Route path="/about">
+          <AboutView/>
+        </Route>
 
-
-
-      <div className="homepageHero">
-        <div className="homepageHeroInfo">
-          <img className="img-hero-1" src="images/paris.jpg" alt="paris"/>
-          <img className="img-hero-3" src="images/travel.jpg" alt="travel-tools"/>
-          <img className="img-hero-2" src="images/rollercoaster.jpeg" alt="rollercoaster"/>
-          
-          <p>DO YOU FANCY A TRIP?</p>
-
-          <img className="img-hero-4" src="images/train.jpg" alt="train"/>
-          <img className="img-hero-5" src="images/wedding.jpg" alt="weeding"/>
-          <img className="img-hero-6" src="images/airplane.jpg" alt="airplane"/>
-        </div>
-      </div>
-
-
-
-      <div className="travelCardsContainer">
-        <div className="travelCard">
-          <img className="travelCardImage" src="images/map.jpg" alt=""/>
-          <div className="cardInfo">
-            <p>Berlin</p>
-            <p>2021-07-12</p>
-          </div>
-        </div>
-
-        <div className="travelCard">
-          <img className="travelCardImage" src="images/map.jpg" alt=""/>
-          <div className="cardInfo">
-            <p>Berlin</p>
-            <p>2021-07-12</p>
-          </div>
-        </div>
-
-        <div className="travelCard">
-          <img className="travelCardImage" src="images/map.jpg" alt=""/>
-          <div className="cardInfo">
-            <p>Berlin</p>
-            <p>2021-07-12</p>
-          </div>
-        </div>
-
-        <div className="travelCard">
-          <img className="travelCardImage" src="images/map.jpg" alt=""/>
-          <div className="cardInfo">
-            <p>Berlin</p>
-            <p>2021-07-12</p>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div className="mapContainer">
-        <img src="images/map.jpg" alt=""/>
-      </div>
-
-
-
-      <footer className="footer">
-        <div className="socialMedia">
-          <a href="#">
-            <img src="images/home.svg" alt="home-icon"/>
-          </a>
-
-          <a href="#">
-            <img src="images/email.svg" alt="email-icon"/>
-          </a>
-
-          <a href="#">
-            <img src="images/instagram.svg" alt="instagram-icon"/>
-          </a>
-        </div>
-
-        <p className="copyright">Diogo Lima @ 2024</p>
-      </footer>
+        <Route>
+          <NotFoundView/>
+        </Route>
+      </Switch>
+      
+      <Footer/>
     </>
   )
 };
