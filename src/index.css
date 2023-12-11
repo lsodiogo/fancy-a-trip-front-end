@@ -14,7 +14,7 @@
 
 body {
    font-family: 'Montserrat', sans-serif;
-   font-weight: 100;
+   font-weight: 200;
    background-color: #EEE7DA;
 }
 /* -------------------------------------------------- */
@@ -23,36 +23,44 @@ body {
 
 /* --------------------- HEADER --------------------- */
 .header {
-   overflow: hidden;
    background-color: #AFC8AD;
-   padding: 20px 10px;
+   padding: 30px 15px;
+
+   overflow: hidden;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   width: 100%;  
 }
 
 .header a {
    float: left;
    color: #000000;
 
-   text-align: center;
    padding: 20px;
    
    text-decoration: none;
    font-size: 20px;
    line-height: 20px;
    border-radius: 25px;
+   letter-spacing: 1px;
 }
 
 .header a.header-left {
    font-size: 30px;
    font-weight: none;
+   letter-spacing: 10px;
 }
 
 .header a:hover {
    background-color: #88AB8E;
+   color: #EEE7DA;
 }
 
 /* DÚVIDA: Como altero/verifico o estado ativo? */
 .header a.active {
    background-color: #88AB8E;
+   color: #EEE7DA;
 }
 
 .header-right {
@@ -78,7 +86,7 @@ body {
 .homepageHero {
    width: auto;
    height: auto;
-   margin: 10px;
+   margin: 100px 10px 10px;
 
    background-color: #EEE7DA;
 
@@ -86,6 +94,20 @@ body {
    flex-direction: column;
    padding: 50px;
    text-align: center;
+}
+
+.homepageHero p {
+   position: relative;
+   animation: mymove 3s infinite;
+   animation-direction: alternate;
+}
+
+@keyframes mymove {
+   0%  {opacity: 1;}
+  25%  {opacity: 0.80;}
+  50%  {opacity: 0.60;}
+  75%  {opacity: 0.40;}
+  100% {opacity: 0.20;}
 }
 
 .homepageHero img {
