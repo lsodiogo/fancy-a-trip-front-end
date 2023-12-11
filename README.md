@@ -18,11 +18,11 @@ Various features will be added as the project develops.
 |Homepage: list of travel locations| | x | |
 |Homepage: map| | x | |
 | |
-|Detailed travel location page: home| x | | |
+|Detailed travel location page: home| | x | |
 |Detailed travel location page: slideshow of images| x | | |
 |Detailed travel location page: description of travel| x | | |
 |Detailed travel location page: weather| x | | |
 | |
-|New travel location page: form| x | | |
+|New travel location page: form| | x | |
 | |
-|Traveler/author page: personal info| x | | |
+|Traveler/author page: personal info| | x | |
