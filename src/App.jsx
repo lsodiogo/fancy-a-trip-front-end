@@ -8,17 +8,17 @@ function App() {
         <div className="header-right">
           <a className="active" href="#">
             <img src="images/home.svg" alt="home-icon"/>
-            <span> Home</span>
+            <span> HOME</span>
           </a>
 
           <a href="#">
             <img src="images/file.svg" alt="file-icon"/>
-            <span> Add Location</span>
+            <span> ADD LOCATION</span>
           </a>
 
           <a href="#">
             <img src="images/user.svg" alt="user-icon"/>
-            <span> The Traveler</span>
+            <span> ABOUT</span>
           </a>
         </div>
       </header>
@@ -27,10 +27,15 @@ function App() {
 
       <div className="homepageHero">
         <div className="homepageHeroInfo">
-          <img className="img-hero-1" src="images/rollercoaster.jpeg" alt="rollercoaster"/>
-          <img className="img-hero-2" src="images/travel.jpg" alt="travel-tools"/>
+          <img className="img-hero-1" src="images/paris.jpg" alt="paris"/>
+          <img className="img-hero-3" src="images/travel.jpg" alt="travel-tools"/>
+          <img className="img-hero-2" src="images/rollercoaster.jpeg" alt="rollercoaster"/>
+          
           <p>DO YOU FANCY A TRIP?</p>
-          <img className="img-hero-3" src="images/wedding.jpg" alt="weeding"/>
+
+          <img className="img-hero-4" src="images/train.jpg" alt="train"/>
+          <img className="img-hero-5" src="images/wedding.jpg" alt="weeding"/>
+          <img className="img-hero-6" src="images/airplane.jpg" alt="airplane"/>
         </div>
       </div>
 
