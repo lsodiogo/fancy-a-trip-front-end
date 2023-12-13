@@ -1,0 +1,11 @@
+{
+   "id": 1,
+   "trip":
+      {
+         "city": "Porto",
+         "country": "Portugal",
+         "continent": "Europe"
+      },
+   "date": "2000-01-01",
+   "imageURL": "arroz"
+}

@@ -18,7 +18,7 @@ Various features will be added as the project develops.
 |Homepage: list of travel locations| | x | |
 |Homepage: map| | x | |
 | |
-|Detailed travel location page: home| | x | |
+|Detailed travel location page: home| x | | |
 |Detailed travel location page: slideshow of images| x | | |
 |Detailed travel location page: description of travel| x | | |
 |Detailed travel location page: weather| x | | |
@@ -26,3 +26,5 @@ Various features will be added as the project develops.
 |New travel location page: form| | x | |
 | |
 |Traveler/author page: personal info| | x | |
+| |
+|Page not found| | x | |
