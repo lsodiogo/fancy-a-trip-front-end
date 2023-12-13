@@ -1,39 +1,11 @@
-import { Link } from "wouter"
-
-function TravelCards() {
+function TravelCards({travelInfo}) {
    return (
       <>
-         <div className="travelCardsContainer">
-            <div className="travelCard">
-               <img className="travelCardImage" src="images/map.jpg" alt=""/>
-               <div className="cardInfo">
-               <p>Berlin</p>
-               <p>2021-07-12</p>
-               </div>
-            </div>
-
-            <div className="travelCard">
-               <img className="travelCardImage" src="images/map.jpg" alt=""/>
-               <div className="cardInfo">
-               <p>Berlin</p>
-               <p>2021-07-12</p>
-               </div>
-            </div>
-
-            <div className="travelCard">
-               <img className="travelCardImage" src="images/map.jpg" alt=""/>
-               <div className="cardInfo">
-               <p>Berlin</p>
-               <p>2021-07-12</p>
-               </div>
-            </div>
-
-            <div className="travelCard">
-               <img className="travelCardImage" src="images/map.jpg" alt=""/>
-               <div className="cardInfo">
-               <p>Berlin</p>
-               <p>2021-07-12</p>
-               </div>
+         <div className="travelCard">
+            <img className="travelCardImage" src={travelInfo.imageURL} alt=""/>
+            <div className="cardInfo">
+            <p>{travelInfo.trip.city}, {travelInfo.trip.country}</p>
+            <p>{travelInfo.date}</p>
             </div>
          </div>
       </>

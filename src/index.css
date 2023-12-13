@@ -23,7 +23,9 @@ body {
 
 /* --------------------- HEADER --------------------- */
 .header {
-   background-color: #AFC8AD;
+   background: rgb(175,200,173);
+   background: linear-gradient(180deg, rgba(175,200,173,1) 25%, rgba(238,231,218,0.75) 100%);
+
    padding: 30px 15px;
 
    overflow: hidden;

@@ -1,12 +1,12 @@
-import { Route, Switch } from "wouter"
+import { Route, Switch } from "wouter";
 
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-import HomeView from "./views/HomeView"
-import NewLocationView from "./views/NewLocationView"
-import AboutView from "./views/AboutView"
-import NotFoundView from "./views/NotFoundView"
+import HomeView from "./views/HomeView";
+import NewLocationView from "./views/NewLocationView";
+import AboutView from "./views/AboutView";
+import NotFoundView from "./views/NotFoundView";
 
 function App() {
 

@@ -1,11 +1,38 @@
 {
-   "id": 1,
-   "trip":
-      {
-         "city": "Porto",
-         "country": "Portugal",
-         "continent": "Europe"
-      },
-   "date": "2000-01-01",
-   "imageURL": "arroz"
+   "data":
+      [
+         { 
+            "id": 1,
+            "trip":
+               {
+                  "city": "Porto",
+                  "country": "Portugal",
+                  "continent": "Europe"
+               },
+            "date": "2000-01-01",
+            "imageURL": "images/map.jpg"
+         },
+         {
+            "id": 2,
+            "trip":
+               {
+                  "city": "Lisboa",
+                  "country": "Portugal",
+                  "continent": "Europe"
+               },
+            "date": "2000-01-02",
+            "imageURL": "images/map.jpg"
+         },
+         {
+            "id": 3,
+            "trip":
+               {
+                  "city": "Brussels",
+                  "country": "Belgium",
+                  "continent": "Europe"
+               },
+            "date": "2000-01-03",
+            "imageURL": "images/map.jpg"
+         }
+      ]
 }
