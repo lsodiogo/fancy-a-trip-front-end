@@ -12,9 +12,9 @@ function Header() {
                   <span>HOME</span>
                </Link>
 
-               <Link href="/newLocation">
+               <Link href="/newlocation">
                   <img src="images/file.svg" alt="file-icon"/>
-                  <span> ADD LOCATION</span>
+                  <span> TRIP SUGGESTION</span>
                </Link>
 
                <Link href="/about">

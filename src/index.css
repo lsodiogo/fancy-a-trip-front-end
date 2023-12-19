@@ -215,3 +215,79 @@ body {
    font-size: 13px;
 }
 /* -------------------------------------------------- */
+
+
+
+/* ---------------------- FORM ---------------------- */
+.titleSuggestionPage {
+   margin: 50px auto;
+   padding: 50px;
+
+   text-align: center;
+   font-size: 50px;
+   text-shadow: 3px 3px 3px #CCCCCC;
+
+   letter-spacing: 5px;
+}
+
+.formSuggestion {
+   margin: 50px auto;
+   width: 50%;
+
+   position: relative;
+   text-align: center;
+}
+
+.formSuggestion .formSuggestionFieldset {
+   background: #FFFFFF;
+
+   margin: auto;
+   padding: 30px;
+   width: auto;
+
+   border: none;
+   border-radius: 5px;
+   box-shadow: 0 0 15px 1px #CCCCCC;
+   box-sizing: border-box;
+}
+
+.formSuggestion h2 {
+   margin-bottom: 30px;
+   border-bottom: 1px solid #CCCCCC;
+}
+
+.formSuggestion .formSuggestionInput {
+   color: #000000;
+   
+   margin-bottom: 15px;
+   padding: 15px;
+   width: 100%;
+
+   border: 1px solid #CCCCCC;
+   border-radius: 5px;
+   box-sizing: border-box; 
+}
+
+.formSuggestion .formSuggestionSubmit {
+   background: #AFC8AD;
+   color: #EEE7DA;
+
+   margin: 10px;
+   padding: 10px;
+   width: 100px;
+
+   border: 0 none;
+   border-radius: 5px;
+   cursor: pointer;
+
+   font-size: 20px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   text-decoration: none;
+}
+
+.formSuggestion .formSuggestionSubmit:hover {
+   background-color: #88AB8E;
+   color: #EEE7DA;
+}
+/* -------------------------------------------------- */

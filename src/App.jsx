@@ -19,7 +19,7 @@ function App() {
           <HomeView/>
         </Route>
 
-        <Route path="/newLocation">
+        <Route path="/newlocation">
           <NewLocationView/>
         </Route>
 
