@@ -43,7 +43,7 @@ function NewLocationView() {
                 
 
                 <fieldset className="formSuggestionFieldset">
-                    <h2>Your trip suggestion:</h2>
+                    <h2>Leave your trip suggestion:</h2>
 
                     <label>
                         Country:
@@ -53,8 +53,10 @@ function NewLocationView() {
                             name="country"
                             onChange={handleChange}>
                             <option selected disabled>Select country</option>
-                            {getDataCountry.map(item =>
-                                <option key={item.country}>{item.country}</option>
+                            {getDataCountry.map((item, index) =>
+                                <option key={index}>
+                                    {item.country}
+                                </option>
                             )}
                         </select>
                     </label>

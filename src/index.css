@@ -42,7 +42,7 @@ body {
    padding: 20px;
    
    text-decoration: none;
-   font-size: 20px;
+   font-size: 15px;
    line-height: 20px;
    border-radius: 25px;
    letter-spacing: 1px;
@@ -70,7 +70,7 @@ body {
 }
 
 /* NOTE: Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 910px) {
    .header a {
       float: none;
       display: block;
@@ -133,8 +133,10 @@ body {
 .travelCardsContainer {
    display: flex;
    flex-wrap: wrap;
-   gap: 10px;
+   gap: 50px;
    justify-content: center;
+
+   box-shadow: 0 0 15px 1px #CCCCCC;
 }
 
 .travelCard {
@@ -147,6 +149,8 @@ body {
    display: flex;
    align-items: center;
    flex-direction: column;
+
+   box-shadow: 0 0 15px 1px #CCCCCC;
 }
 
 .travelCardImage {
@@ -166,10 +170,8 @@ body {
 /* ---------------------- MAP ----------------------- */
 .mapContainer img {
    display: block;
-   margin-left: auto;
-   margin-right: auto;
-   max-width: 75%;
-   padding: 20px 0;
+   margin: 50px auto;
+   max-width: 50%;
 }
 /* -------------------------------------------------- */
 
@@ -179,6 +181,9 @@ body {
 .footer {
    background-color: #F2F1EB;
    padding: 30px 0;
+/*    position: sticky;
+   bottom: 0;
+   width: 100%; */
 }
 
 .footer .socialMedia {

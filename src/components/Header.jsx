@@ -9,7 +9,7 @@ function Header() {
             <div className="header-right">
                <Link className="active" href="/">
                   <img src="images/home.svg" alt="home-icon"/>
-                  <span>HOME</span>
+                  <span> HOME</span>
                </Link>
 
                <Link href="/newlocation">
@@ -19,7 +19,7 @@ function Header() {
 
                <Link href="/about">
                   <img src="images/user.svg" alt="user-icon"/>
-                  <span> ABOUT</span>
+                  <span> THE TRAVELER</span>
                </Link>
             </div>
          </header>
