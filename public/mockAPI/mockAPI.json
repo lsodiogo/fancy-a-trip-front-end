@@ -1,0 +1,185 @@
+{
+   "data":
+      [
+         { 
+            "id": 1,
+            "destination":
+               {
+                  "city": "Porto",
+                  "country": "Portugal",
+                  "continent": "Europe"
+               },
+            "checkin": "2020-01-03",
+            "checkout": "2022-02-03",
+            "imageURL": "images/map.jpg",
+            "lat": 41,
+            "lon": -8,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 2,
+            "destination":
+               {
+                  "city": "Lisboa",
+                  "country": "Portugal",
+                  "continent": "Europe"
+               },
+            "checkin": "2002-08-23",
+            "checkout": "2002-08-29",
+            "imageURL": "images/map.jpg",
+            "lat": 38,
+            "lon": -9,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 3,
+            "destination":
+               {
+                  "city": "Brussels",
+                  "country": "Belgium",
+                  "continent": "Europe"
+               },
+            "checkin": "2023-03-15",
+            "checkout": "2023-03-21",
+            "imageURL": "images/map.jpg",
+            "lat": 50,
+            "lon": 21,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 4,
+            "destination":
+               {
+                  "city": "Dublin",
+                  "country": "Ireland",
+                  "continent": "Europe"
+               },
+            "checkin": "2019-10-02",
+            "checkout": "2019-11-21",
+            "imageURL": "images/map.jpg",
+            "lat": 53,
+            "lon": -6,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 5,
+            "destination":
+               {
+                  "city": "Paris",
+                  "country": "France",
+                  "continent": "Europe"
+               },
+            "checkin": "2009-01-29",
+            "checkout": "2009-02-04",
+            "imageURL": "images/map.jpg",
+            "lat": 48,
+            "lon": 2,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 6,
+            "destination":
+               {
+                  "city": "Madrid",
+                  "country": "Spain",
+                  "continent": "Europe"
+               },
+            "checkin": "2023-08-29",
+            "checkout": "2023-09-04",
+            "imageURL": "images/map.jpg",
+            "lat": 40,
+            "lon": -3,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 7,
+            "destination":
+               {
+                  "city": "Barcelona",
+                  "country": "Spain",
+                  "continent": "Europe"
+               },
+            "checkin": "2016-11-22",
+            "checkout": "2016-11-29",
+            "imageURL": "images/map.jpg",
+            "lat": 41,
+            "lon": 2,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 8,
+            "destination":
+               {
+                  "city": "Stockholm",
+                  "country": "Sweden",
+                  "continent": "Europe"
+               },
+            "checkin": "2011-05-15",
+            "checkout": "2011-05-21",
+            "imageURL": "images/map.jpg",
+            "lat": 59,
+            "lon": 18,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 9,
+            "destination":
+               {
+                  "city": "Luzern",
+                  "country": "Switzerland",
+                  "continent": "Europe"
+               },
+            "checkin": "2013-02-15",
+            "checkout": "2013-02-25",
+            "imageURL": "images/map.jpg",
+            "lat": 47,
+            "lon": 8,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 10,
+            "destination":
+               {
+                  "city": "Cannes",
+                  "country": "France",
+                  "continent": "Europe"
+               },
+            "checkin": "2022-03-07",
+            "checkout": "2022-03-13",
+            "imageURL": "images/map.jpg",
+            "lat": 43,
+            "lon": 7,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 11,
+            "destination":
+               {
+                  "city": "Cork",
+                  "country": "Ireland",
+                  "continent": "Europe"
+               },
+            "checkin": "2023-12-13",
+            "checkout": "2023-12-18",
+            "imageURL": "images/map.jpg",
+            "lat": 51,
+            "lon": 8,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         },
+         {
+            "id": 12,
+            "destination":
+               {
+                  "city": "Bucharest",
+                  "country": "Romania",
+                  "continent": "Europe"
+               },
+            "checkin": "2023-09-29",
+            "checkout": "2023-10-01",
+            "imageURL": "images/map.jpg",
+            "lat": 44,
+            "lon": 26,
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum hic consequuntur dicta error. Autem exercitationem, cupiditate, ratione repudiandae delectus perspiciatis rem reprehenderit numquam iusto corporis quia eaque voluptatum natus."
+         }
+      ]
+}
