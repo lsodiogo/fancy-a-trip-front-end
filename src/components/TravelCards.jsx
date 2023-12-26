@@ -3,9 +3,9 @@ import { Link } from "wouter";
 function TravelCards({travelInfo}) {
    return (
       <>       
-         <Link href={"/" + travelInfo.destination.city}>
+         <Link to={"/" + travelInfo.destination.city}>
             <div className="travelCard">
-               <img className="travelCardImage" src={travelInfo.imageURL} alt={travelInfo.destination.city}/>
+               <img className="travelCardImage" src={travelInfo.coverIMG} alt={travelInfo.destination.city}/>
                
                <div className="cardInfo">
                   <p>{travelInfo.destination.city}, {travelInfo.destination.country}</p>

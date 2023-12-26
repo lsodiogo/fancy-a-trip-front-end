@@ -4,25 +4,25 @@ function Header() {
    return (
       <>
          <header className="header">
-            <a className="header-left" href="/">FANCY A TRIP</a>
+            <Link className="header-left" to="/">FANCY A TRIP</Link>
 
             <div className="header-right">
-               <Link href="/">
+               <Link to="/">
                   <img src="images/home.svg" alt="home-icon"/>
                   <span> HOME</span>
                </Link>
 
-               <Link href="/alltrips">
+               <Link to="/alltrips">
                   <img src="images/suitcase.svg" alt="suitcase-icon"/>
                   <span> ALL TRIPS</span>
                </Link>
                
-               <Link href="/newlocation">
+               <Link to="/newlocation">
                   <img src="images/plane.svg" alt="plane-icon"/>
                   <span> TRIP SUGGESTION</span>
                </Link>
 
-               <Link href="/about">
+               <Link to="/about">
                   <img src="images/user.svg" alt="user-icon"/>
                   <span> THE TRAVELER</span>
                </Link>

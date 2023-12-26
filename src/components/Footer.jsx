@@ -5,20 +5,20 @@ function Footer() {
       <>
          <footer className="footer">
             <div className="socialMedia">
-               <Link href="/">
+               <Link to="/">
                   <img src="images/home.svg" alt="home-icon" />
                   <span></span>
                </Link>
 
-               <Link href="#">
+               <Link to="#">
                   <img src="images/email.svg" alt="email-icon"/>
                   <span></span>
                </Link>
 
-               <Link href="https://www.instagram.com/diogooslima/">
+               <a href="https://www.instagram.com/diogooslima/">
                   <img src="images/instagram.svg" alt="instagram-icon"/>
                   <span></span>
-               </Link>
+               </a>
             </div>
 
             <p className="copyright">Diogo Lima @ 2024</p>

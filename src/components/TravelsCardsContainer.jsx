@@ -30,7 +30,7 @@ function TravelsCardsContainer() {
                )
             }
 
-            <Link href="/alltrips">
+            <Link to="/alltrips">
                <div className="travelCard">
                   <img className="travelCardSearch" src="images/search.svg" alt="search-icon"/>
                   <div className="cardInfo">
