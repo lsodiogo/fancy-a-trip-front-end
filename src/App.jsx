@@ -37,7 +37,7 @@ function App() {
           <AboutView />
         </Route>
 
-        <Route path="/:city">
+        <Route path="/trips/:city">
           {params => <DetailedTripView pathParams={params.city}/>}
         </Route>
 

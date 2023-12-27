@@ -1,8 +1,11 @@
 function NotFoundView() {
     return (
         <>
-            <h1>!!!404!!!</h1>
-            <h2>PAGE NOT FOUND</h2>
+            <div className="notFoundContainer">
+                <h1>4<img src="images/globe.svg" alt="globe-icon"/>4</h1>
+                <h2>WHOOOPS...</h2>
+                <h3>you seem to be lost in your own world</h3>
+            </div>
         </>
     )
 };

@@ -53,6 +53,7 @@ function DetailedTripView({pathParams}) {
 
             <div className="sliderDetailedPage">
                <p>SLIDER HERE</p>
+               <img src={detailedTrip.coverIMG} alt={detailedTrip.destination?.city}/>
             </div>
 
             <div className="mapDetailedPage">
