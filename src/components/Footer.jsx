@@ -5,12 +5,12 @@ function Footer() {
       <>
          <footer className="footer">
             <div className="socialMedia">
-               <Link to="/">
+               <Link href="/">
                   <img src="images/home.svg" alt="home-icon" />
                   <span></span>
                </Link>
 
-               <Link to="#">
+               <Link href="#">
                   <img src="images/email.svg" alt="email-icon"/>
                   <span></span>
                </Link>

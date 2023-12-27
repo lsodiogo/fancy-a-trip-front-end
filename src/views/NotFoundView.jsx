@@ -8,7 +8,7 @@ function NotFoundView() {
                 <h2>WHOOOPS...</h2>
                 <h3>you seem to be lost in your own world</h3>
                 <h3>this is not the page you were looking for</h3>
-                <Link to="/">
+                <Link href="/">
                   <span>go back home</span>
                 </Link>
             </div>
