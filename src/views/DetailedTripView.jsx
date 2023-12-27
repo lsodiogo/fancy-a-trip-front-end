@@ -4,43 +4,32 @@ import mockAPIService from "../services/mockAPIService";
 
 function DetailedTripView({pathParams}) {
    
-   const [detailedTrip, setDetailedTrip] = useState({})
-
-   useEffect(function() {
-      (async function() {
-         const result = await mockAPIService.getTravelCardList()
-
-         const foundElement = result.find(obj => {
-            return obj.destination.city == pathParams
-         })
-
-         setDetailedTrip(foundElement)
-      })()
-   }, []);
-
-
-
-
+   const [detailedTrip, setDetailedTrip] = useState({});
    const [weatherInfo, setWeatherInfo] = useState({});
    const [isLoading, setIsLoading] = useState(false);
 
-   const urlWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${detailedTrip.lat}&lon=${detailedTrip.lon}&exclude=current&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a&units=metric`;
-
-   useEffect(function(){
+   useEffect(function() {
       setIsLoading(true);
-      
+
       (async function() {
-         const response = await fetch(urlWeatherAPI)
-         const result = await response.json()
+         const cardListResult = await mockAPIService.getTravelCardList();
+         const foundElement = cardListResult.find(obj => {
+            return obj.destination.city == pathParams;
+         });
 
-         setIsLoading(false)
-         console.log(result)
-         setWeatherInfo(result)
-      })()
-   }, [])
+         setDetailedTrip(foundElement);
 
+         const urlWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${foundElement.lat}&lon=${foundElement.lon}&exclude=current&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a&units=metric`;
 
-   
+         const response = await fetch(urlWeatherAPI);
+         const result = await response.json();
+
+         setIsLoading(false);
+
+         console.log(result);
+         setWeatherInfo(result);
+      })();
+   }, []);
 
    return (
       <>
@@ -68,9 +57,9 @@ function DetailedTripView({pathParams}) {
                <div className="tripWeather">
                   <p>WEATHER HERE</p>
                   <span>{isLoading ? <p>Loading...</p> : null}</span>
-                  {/* <p>{weatherInfo?.name}</p>
-                  <p>{weatherInfo?.weather.main}</p>
-                  <p>{weatherInfo?.main.temp}ºC</p> */}
+                  <p>{weatherInfo.name}.</p>
+                  <p>{console.log(weatherInfo.weather?.main)}{weatherInfo.weather?.main}.</p>
+                  <p>{weatherInfo.main?.temp}ºC</p>
                </div>
             </div>
          </div>
