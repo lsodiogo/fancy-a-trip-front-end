@@ -1,33 +1,54 @@
 import { useEffect, useState } from "react";
 
 import mockAPIService from "../services/mockAPIService";
+import WeatherContainer from "../components/WeatherContainer";
 
 function DetailedTripView({pathParams}) {
    
    const [detailedTrip, setDetailedTrip] = useState({});
-   const [weatherInfo, setWeatherInfo] = useState({});
-   const [isLoading, setIsLoading] = useState(false);
+   const [currentWeatherInfo, setCurrentWeatherInfo] = useState({});
+   const [forecastWeatherInfo, setForecastWeatherInfo] = useState([]);
 
    useEffect(function() {
-      setIsLoading(true);
 
       (async function() {
-         const cardListResult = await mockAPIService.getTravelCardList();
-         const foundElement = cardListResult.find(obj => {
+         const responseMockAPI = await mockAPIService.getTravelCardList();
+         const foundElement = responseMockAPI.find(obj => {
             return obj.destination.city == pathParams;
          });
 
          setDetailedTrip(foundElement);
 
-         const urlWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${foundElement.lat}&lon=${foundElement.lon}&exclude=current&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a&units=metric`;
 
-         const response = await fetch(urlWeatherAPI);
-         const result = await response.json();
 
-         setIsLoading(false);
+         const urlCurrentWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${foundElement.lat}&lon=${foundElement.lon}&exclude=current&units=metric&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a`;
 
-         console.log(result);
-         setWeatherInfo(result);
+         const responseWeatherAPI = await fetch(urlCurrentWeatherAPI);
+         const resultWeatherAPI = await responseWeatherAPI.json();
+
+         console.log(resultWeatherAPI);
+         setCurrentWeatherInfo(resultWeatherAPI);
+
+
+
+         const urlForecastWeatherAPI = `https://api.openweathermap.org/data/2.5/forecast?&lat=${foundElement.lat}&lon=${foundElement.lon}&exclude=current&units=metric&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a`
+
+         const responseWeatherAPI2 = await fetch(urlForecastWeatherAPI);
+         const resultWeatherAPI2 = await responseWeatherAPI2.json();
+
+         console.log(resultWeatherAPI2)
+
+         const newResult = [
+            resultWeatherAPI2.list[0],
+            resultWeatherAPI2.list[8],
+            resultWeatherAPI2.list[16],
+            resultWeatherAPI2.list[24],
+            resultWeatherAPI2.list[32]
+         ]
+
+         console.log(newResult);
+         setForecastWeatherInfo(newResult);
+
       })();
    }, []);
 
@@ -36,8 +57,8 @@ function DetailedTripView({pathParams}) {
          <div className="mainContainerDetailedPage">
             <div className="titleDetailedPage">
                <h1>{detailedTrip.destination?.city}, {detailedTrip.destination?.country}</h1>
-               <p><img src="images/departure.svg" alt="departure-icon"/> {detailedTrip.checkin}</p>
-               <p><img src="images/arrival.svg" alt="arrival-icon"/> {detailedTrip.checkout}</p>
+               <p><img src="/images/departure.svg" alt="departure-icon"/> {detailedTrip.checkin}</p>
+               <p><img src="/images/arrival.svg" alt="arrival-icon"/> {detailedTrip.checkout}</p>
             </div>
 
             <div className="sliderDetailedPage">
@@ -46,21 +67,20 @@ function DetailedTripView({pathParams}) {
             </div>
 
             <div className="mapDetailedPage">
-               <img src="images/map.jpg" alt=""/>
+               <img src="/images/map.jpg" alt=""/>
             </div>
             
             <div className="infoDetailedPage">
                <div className="tripDescription">
-                  <p>{detailedTrip.description}</p>
+                  {detailedTrip.description}
                </div>
 
-               <div className="tripWeather">
-                  <p>WEATHER HERE</p>
-                  <span>{isLoading ? <p>Loading...</p> : null}</span>
-                  <p>{weatherInfo.name}.</p>
-                  <p>{console.log(weatherInfo.weather?.main)}{weatherInfo.weather?.main}.</p>
-                  <p>{weatherInfo.main?.temp}ºC</p>
-               </div>
+               <WeatherContainer
+                  key={currentWeatherInfo.id}
+                  detailedTrip={detailedTrip}
+                  currentWeatherInfo={currentWeatherInfo}
+                  forecastWeatherInfo={forecastWeatherInfo}
+               />
             </div>
          </div>
       </>

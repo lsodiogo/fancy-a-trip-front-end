@@ -32,7 +32,7 @@ function TravelsCardsContainer() {
 
             <Link href="/alltrips">
                <div className="travelCard">
-                  <img className="travelCardSearch" src="images/search.svg" alt="search-icon"/>
+                  <img className="travelCardSearch" src="/images/search.svg" alt="search-icon"/>
                   <div className="cardInfo">
                      <p>SEE MORE</p>
                   </div>

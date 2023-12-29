@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad&family=Lato:wght@100&family=Montserrat:wght@100&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css');
 
 /*    font-family: 'Afacad', sans-serif; */
 /*    font-family: 'Lato', sans-serif; */
@@ -145,6 +147,8 @@ body {
    text-align: center;
    font-size: 30px;
    letter-spacing: 10px;
+   padding-top: 50px;
+   border-top: 1px solid #000000;
 }
 
 .travelCardsContainer {
@@ -157,7 +161,7 @@ body {
 }
 
 .travelCard {
-   border:1px solid #000000;
+   border: 1px solid #000000;
    border-radius: 5%;
    
    width: 250px;
@@ -342,7 +346,7 @@ body {
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
-   gap: 20px;
+   gap: 15px;
    margin: auto;
 
    font-size: 15px;
@@ -354,9 +358,12 @@ body {
 }
 
 .titleDetailedPage p {
-   background-color: #AFC8AD;
+   background-color: #739072;
+   color: #FFFFFF;
+   text-shadow: none;
    margin: auto;
-   width: 50%;
+   width: 75%;
+   border-radius: 10px;
 }
 
 .sliderDetailedPage {
@@ -392,19 +399,78 @@ body {
 .infoDetailedPage {
    display: flex;
    flex-direction: row;
-   justify-content: center;
    gap: 50px;
    width: 100%;
+   height: 100%;
 }
 
 .infoDetailedPage .tripDescription {
-   text-align: left;
+   width: 150%;
+   letter-spacing: 1px;
+   line-height: 23px;
+   text-align: justify;
+   text-justify: inter-word;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+/* -------------------------------------------------- */
+
+
+
+/* ----------------- WEATHER WIDGET ----------------- */
+.infoDetailedPage .tripWeather {
+   background-color: #739072;
+   font-family: Poiret One;
+   letter-spacing: 5px;
+   height: 250px;
    width: 100%;
+   border-radius: 20px;
+   box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
 }
 
-.infoDetailedPage .tripWeather {
-   text-align: right;
-   width: 100%;
+.weatherTitle {
+   height: 10%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.weatherHeader {
+   height: 40%;
+   border-radius: 20px 20px 0px 0px;
+   background: #F2F1EB;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 10%; 
+}
+
+.weatherIcon {
+   background-color: #CCCCCC;
+}
+
+.currentWeatherInfo {
+   height: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 10%;
+}
+
+.temperature {
+   font-size: 50px;
+}
+
+.weatherCondition {
+   font-size: 50px;
+   text-transform: uppercase;
 }
 /* -------------------------------------------------- */
 

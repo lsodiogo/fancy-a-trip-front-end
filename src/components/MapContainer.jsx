@@ -2,7 +2,7 @@ function MapContainer() {
    return (
       <>
          <div className="mapContainer">
-           <img src="images/map.jpg" alt=""/>
+           <img src="/images/map.jpg" alt=""/>
          </div>
       </>
    )

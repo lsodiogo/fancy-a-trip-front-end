@@ -1,8 +1,8 @@
 async function getTravelCardList() {
-   const response = await fetch("/mockAPI/mockAPI.json")
-   const result = await response.json()
+   const response = await fetch("/mockAPI/mockAPI.json");
+   const result = await response.json();
 
-   return result.data
+   return result.data;
 };
 
 export default {
