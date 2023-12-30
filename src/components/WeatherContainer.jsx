@@ -1,4 +1,7 @@
-function WeatherContainer({detailedTrip, currentWeatherInfo, forecastWeatherInfo}) {
+import GetCurrentDate from "./GetCurrentDate";
+
+function WeatherContainer(
+   {detailedTrip, currentWeatherInfo, forecastWeatherInfo}) {
    return (
       <>
          <div className="tripWeather">
@@ -13,7 +16,7 @@ function WeatherContainer({detailedTrip, currentWeatherInfo, forecastWeatherInfo
                </div>
 
                <div className="weatherDate">
-                  {console.log(new Date)}Monday, 20 Aug 2018
+                  <GetCurrentDate/>
                </div> 
             </div>
 
@@ -33,21 +36,24 @@ function WeatherContainer({detailedTrip, currentWeatherInfo, forecastWeatherInfo
                </div>
             </div>  
 
+
             <h3>Forecast:</h3>
             <div className="">
                {forecastWeatherInfo?.map(item => {
                   return(
                      <>
-                        <p>{item.dt_txt} :</p>
-                        <p>{Math.round(item.main?.temp) + " ºC"}</p>
+                        <p>{(item.dt_txt).substring(0,10)}</p>
+                        <p>{Math.round(item.main?.temp)}&deg;</p>
                         <img src={"https://openweathermap.org/img/wn/" + item.weather?.[0].icon + ".png"} alt={"weather-icon-" + item.weather?.[0].main}/>
                         <p>{item.weather?.[0].main}</p>
                         <hr />
                      </>
                   )
                })}
-            </div>   
+            </div> 
          </div>
+
+         
       </>
    )
 };
