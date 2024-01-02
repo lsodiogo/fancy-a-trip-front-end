@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import mockAPIService from "../services/mockAPIService";
+import DetailedMapContainer from "../components/DetailedMapContainer";
 import WeatherContainer from "../components/WeatherContainer";
 
 function DetailedTripView({pathParams}) {
@@ -26,17 +27,24 @@ function DetailedTripView({pathParams}) {
          const responseWeatherAPI = await fetch(urlCurrentWeatherAPI);
          const resultWeatherAPI = await responseWeatherAPI.json();
 
-         console.log(resultWeatherAPI);
          setCurrentWeatherInfo(resultWeatherAPI);
 
 
 
-         const urlForecastWeatherAPI = `https://api.openweathermap.org/data/2.5/forecast?&lat=${foundElement.lat}&lon=${foundElement.lon}&exclude=current&units=metric&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a`
+         const urlForecastWeatherAPI = `https://api.openweathermap.org/data/2.5/forecast?&lat=${foundElement.lat}&lon=${foundElement.lon}&exclude=current&units=metric&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a`;
 
          const responseWeatherAPI2 = await fetch(urlForecastWeatherAPI);
          const resultWeatherAPI2 = await responseWeatherAPI2.json();
 
-         console.log(resultWeatherAPI2)
+         /* let objectDate = new Date();
+         let year = objectDate.getFullYear();
+         let month = objectDate.getMonth()+1;
+         let day = objectDate.getDate();
+         let dateFormat = `${year}-0${month}-0${(+day+1)} 00:00:00` */
+
+         /* const newResult = resultWeatherAPI2.list.find(obj => {
+            obj === dateFormat
+         }); */
 
          const newResult = [
             resultWeatherAPI2.list[0],
@@ -44,9 +52,13 @@ function DetailedTripView({pathParams}) {
             resultWeatherAPI2.list[16],
             resultWeatherAPI2.list[24],
             resultWeatherAPI2.list[32]
-         ]
+         ];
 
-         console.log(newResult);
+         /* const newResult = [
+            resultWeatherAPI2.list[3],
+            resultWeatherAPI2.list[11]
+         ] */
+
          setForecastWeatherInfo(newResult);
 
       })();
@@ -66,9 +78,10 @@ function DetailedTripView({pathParams}) {
                <img src={detailedTrip.coverIMG} alt={detailedTrip.destination?.city}/>
             </div>
 
-            <div className="mapDetailedPage">
-               <img src="/images/map.jpg" alt=""/>
-            </div>
+            {/* <DetailedMapContainer
+               key={detailedTrip.id}
+               detailedTrip={detailedTrip}
+            /> */}
             
             <div className="infoDetailedPage">
                <div className="tripDescription">

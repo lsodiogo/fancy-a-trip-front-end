@@ -15,7 +15,6 @@ function NewLocationView() {
 
     
 
-
     const [formData, setFormData] = useState({
         country: "",
         city: "",
@@ -29,8 +28,6 @@ function NewLocationView() {
         const { name, value } = event.target;
         
         setFormData(data => ({ ...data, [name]: value }));
-
-        /* console.log(formData) */
     };
 
 
@@ -45,7 +42,6 @@ function NewLocationView() {
             <h1 className="titleSuggestionPage">What trip should I do next?</h1>
             <form className="formSuggestion" onSubmit={handleSubmit}>
                 
-
                 <fieldset className="formSuggestionFieldset">
                     <h2>Leave your trip suggestion:</h2>
 
@@ -128,7 +124,7 @@ function NewLocationView() {
                 </fieldset>
             </form>
         </>
-   )
+   );
 };
 
 export default NewLocationView;

@@ -398,14 +398,15 @@ body {
 
 .infoDetailedPage {
    display: flex;
+   flex-wrap: wrap;
    flex-direction: row;
    gap: 50px;
    width: 100%;
    height: 100%;
 }
 
-.infoDetailedPage .tripDescription {
-   width: 150%;
+.tripDescription {
+   flex: 1 33.33%;
    letter-spacing: 1px;
    line-height: 30px;
    text-align: justify;
@@ -421,12 +422,12 @@ body {
 
 
 /* ----------------- WEATHER WIDGET ----------------- */
-.infoDetailedPage .tripWeather {
+.tripWeather {
    background-color: #739072;
    font-family: Poiret One;
    letter-spacing: 5px;
    height: 100%;
-   width: 100%;
+   flex: 1 33.33%;
    border-radius: 20px;
    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
 }
@@ -455,6 +456,7 @@ body {
 
 .weatherIcon {
    background-color: #AFC8AD;
+   border-radius: 10%;
 }
 
 .currentWeatherInfo {
@@ -475,6 +477,69 @@ body {
    font-size: 50px;
    text-transform: uppercase;
 }
+/* -------------------------------------------------- */
+
+
+
+/* ---------------- FORECAST WIDGET ----------------- */
+.forecastWeather {
+   flex: 1 100%;
+   height: 100%;
+   text-align: center;
+   
+   background-color: #739072;
+   font-family: Poiret One;
+   letter-spacing: 5px;
+   border-radius: 20px;
+   box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+
+.forecastTitle {
+   padding: 10px;
+}
+
+.forecastInfo {
+   background-color: #AFC8AD;
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   padding: 15px;
+   border-radius: 20px 20px 0px 0px;
+}
+
+.forecastCard {
+   margin: 10px;
+   padding: 15px;
+   height: 100%;
+   width: 100%;
+   background-color: #F2F1EB;
+   border-radius: 10px;
+}
+
+.forecastTopCard {
+   font-size: 50%;
+}
+
+.forecastBottomCard {
+   display: flex;
+   gap: 20px;
+   padding-top: 10px;
+   align-items: center;
+   justify-content: center;
+}
+
+.forecastLeftCard {
+   background-color: #AFC8AD;
+   border-radius: 10%;
+}
+
+.forecastRightCard {
+   text-transform: uppercase;
+   line-height: 25px;
+}
+
 /* -------------------------------------------------- */
 
 

@@ -1,9 +1,11 @@
-import * as React from 'react';
-import "mapbox-gl/dist/mapbox-gl.css"
-import  Map,{ Marker, NavigationControl} from 'react-map-gl';
+import * as React from "react";
+import "mapbox-gl/dist/mapbox-gl.css";
+import  Map, { Marker, NavigationControl } from "react-map-gl";
+
+import { useEffect, useState } from "react";
 
 import mockAPIService from "../services/mockAPIService";
-import { useEffect, useState } from "react";
+
 
 function MapContainer() {
 
@@ -11,15 +13,14 @@ function MapContainer() {
 
    useEffect(function() {
       (async function() {
-         const result = await mockAPIService.getTravelCardList()
+         const result = await mockAPIService.getTravelCardList();
          
-         setTravelCard(result)
-      })()
-   }, [])
-
-   console.log(travelCard)
+         setTravelCard(result);
+      })();
+   }, []);
 
 
+   
    const token = "pk.eyJ1IjoiZGlvZ29vc2xpbWEiLCJhIjoiY2xxcjRyMXBjMnJxajJpcnlsb2N5Zmp3MSJ9.7OYKXDVANOx-k-Ou4w4G0Q";
 
    const [centerMap, setCenterMap] = React.useState({
@@ -57,8 +58,8 @@ function MapContainer() {
             </Map>
          </div>
       </>
-   )
-}
+   );
+};
 
 
 export default MapContainer;
