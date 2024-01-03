@@ -47,11 +47,11 @@ function DetailedTripView({pathParams}) {
          }); */
 
          const newResult = [
-            resultWeatherAPI2.list[0],
-            resultWeatherAPI2.list[8],
-            resultWeatherAPI2.list[16],
-            resultWeatherAPI2.list[24],
-            resultWeatherAPI2.list[32]
+            resultWeatherAPI2.list[7],
+            resultWeatherAPI2.list[15],
+            resultWeatherAPI2.list[23],
+            resultWeatherAPI2.list[31],
+            resultWeatherAPI2.list[39]
          ];
 
          /* const newResult = [
@@ -59,10 +59,24 @@ function DetailedTripView({pathParams}) {
             resultWeatherAPI2.list[11]
          ] */
 
+         console.log(newResult);
          setForecastWeatherInfo(newResult);
 
       })();
    }, []);
+
+
+   // --- FUNCTION TO AVOID RACE CONDITION --- //
+   function checkCoordinatesForMap() {
+      if ((detailedTrip.lat && detailedTrip.lon) != undefined) {
+         return (
+            <DetailedMapContainer
+               key={detailedTrip.id}
+               detailedTrip={detailedTrip}
+            />
+         );
+      };
+   };
 
    return (
       <>
@@ -78,10 +92,7 @@ function DetailedTripView({pathParams}) {
                <img src={detailedTrip.coverIMG} alt={detailedTrip.destination?.city}/>
             </div>
 
-            {/* <DetailedMapContainer
-               key={detailedTrip.id}
-               detailedTrip={detailedTrip}
-            /> */}
+            <div>{checkCoordinatesForMap()}</div>
             
             <div className="infoDetailedPage">
                <div className="tripDescription">
