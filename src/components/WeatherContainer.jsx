@@ -6,7 +6,7 @@ function WeatherContainer({detailedTrip, currentWeatherInfo, forecastWeatherInfo
       <>
          <div className="tripWeather">
             <div className="weatherTitle">
-               <p>WEATHER</p>
+               <p>CURRENT WEATHER</p>
             </div>
 
             <div className="weatherHeader">
@@ -40,33 +40,29 @@ function WeatherContainer({detailedTrip, currentWeatherInfo, forecastWeatherInfo
 
          <div className="forecastWeather">
             <div className="forecastTitle">
-               <p>FORECAST</p>
+               <p>WEATHER FORECAST BY THIS HOUR FOR THE NEXT DAYS</p>
             </div>
             
             <div className="forecastInfo">
-               {forecastWeatherInfo?.map(item => {
-                  return(
-                     <>
-                        <div className="forecastCard">
-                           <div className="forecastTopCard">
-                              <p>{item.dt_txt.substring(0,10)}</p>
-                           </div>
+               {forecastWeatherInfo?.map(item => 
+                  <div key={item.dt} className="forecastCard">
+                     <div className="forecastTopCard">
+                        <p>{item.dt_txt.substring(0,10)}</p>
+                     </div>
 
-                           <div className="forecastBottomCard">
-                              <div className="forecastLeftCard">
-                                 <img src={"https://openweathermap.org/img/wn/" + item.weather?.[0].icon + ".png"} alt={"weather-icon-" + item.weather?.[0].main}/>
-                              </div>
-
-                              <div className="forecastRightCard">
-                                 <p>{Math.round(item.main?.temp)}&deg;</p>
-                                 <p>{item.weather?.[0].main}</p>
-                              </div>
-                           </div>
-                           
+                     <div className="forecastBottomCard">
+                        <div className="forecastLeftCard">
+                           <img src={"https://openweathermap.org/img/wn/" + item.weather?.[0].icon + ".png"} alt={"weather-icon-" + item.weather?.[0].main}/>
                         </div>
-                     </>
-                  )
-               })}
+
+                        <div className="forecastRightCard">
+                           <p>{Math.round(item.main?.temp_min)}&deg;</p>
+                           <p>{item.weather?.[0].main}</p>
+                        </div>
+                     </div>
+                     
+                  </div>
+               )}
             </div>
          </div>
       </> 

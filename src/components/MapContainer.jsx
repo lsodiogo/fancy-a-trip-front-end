@@ -1,8 +1,9 @@
 import * as React from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
-import  Map, { Marker, NavigationControl } from "react-map-gl";
+import  Map, { Marker, NavigationControl} from "react-map-gl";
 
 import { useEffect, useState } from "react";
+import { Link } from "wouter";
 
 import mockAPIService from "../services/mockAPIService";
 
@@ -26,8 +27,17 @@ function MapContainer() {
    const [centerMap, setCenterMap] = React.useState({
       latitude: 48,
       longitude: 2,
-      zoom: 3
+      zoom: 3,
+      interactive: false
    });
+
+   function handleClick() {
+      return window.location.href = "/trip/" + "Porto";
+      
+      /* if (travelCard.destination?.city != undefined) {
+         return window.location.href = "/trip/" + travelCard.destination.city;
+      }; */
+   };
 
    return(
       <>
@@ -44,15 +54,9 @@ function MapContainer() {
                mapStyle="mapbox://styles/diogooslima/clqshefly00ys01nw2ipqclre"
             >
       
-               {travelCard.map(function (info) {
-                  return(
-                     <>
-                        <div className="location-pin">
-                           <Marker className="marker" latitude={info.lat} longitude={info.lon}/>
-                        </div>
-                     </>
-                  )
-               })}
+               {travelCard.map(info =>
+                  <Marker key={info.id} onClick={handleClick} latitude={info.lat} longitude={info.lon}/>
+               )}
 
                <NavigationControl position="bottom-right" showCompass showZoom/>
             </Map>

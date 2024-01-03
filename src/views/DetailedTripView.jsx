@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import mockAPIService from "../services/mockAPIService";
 import DetailedMapContainer from "../components/DetailedMapContainer";
 import WeatherContainer from "../components/WeatherContainer";
+import Slider from "../components/Slider";
 
 function DetailedTripView({pathParams}) {
    
@@ -59,7 +60,6 @@ function DetailedTripView({pathParams}) {
             resultWeatherAPI2.list[11]
          ] */
 
-         console.log(newResult);
          setForecastWeatherInfo(newResult);
 
       })();
@@ -77,6 +77,7 @@ function DetailedTripView({pathParams}) {
          );
       };
    };
+   // ---------------------------------------- //
 
    return (
       <>
@@ -87,12 +88,15 @@ function DetailedTripView({pathParams}) {
                <p><img src="/images/arrival.svg" alt="arrival-icon"/> {detailedTrip.checkout}</p>
             </div>
 
-            <div className="sliderDetailedPage">
-               <p>SLIDER HERE</p>
-               <img src={detailedTrip.coverIMG} alt={detailedTrip.destination?.city}/>
+            <div /* className="sliderDetailedPage" */>
+               {/* <p>SLIDER HERE</p>
+               <img src={detailedTrip.coverIMG} alt={detailedTrip.destination?.city}/> */}
+               <Slider/>
             </div>
 
-            <div>{checkCoordinatesForMap()}</div>
+            <div>
+               {checkCoordinatesForMap()}
+            </div>
             
             <div className="infoDetailedPage">
                <div className="tripDescription">
