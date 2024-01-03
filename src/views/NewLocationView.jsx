@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
+
 import countriesAPIService from "../services/countriesAPIService";
 
 function NewLocationView() {
     
-    const [getDataCountry, setgetDataCountry] = useState([])
+    const [getDataCountry, setgetDataCountry] = useState([]);
 
     useEffect(function() {
         (async function() {
-            const result = await countriesAPIService.getCountry()
+            const result = await countriesAPIService.getCountry();
            
-            setgetDataCountry(result)
-        })()
-    }, [])
+            setgetDataCountry(result);
+        })();
+    }, []);
 
     
 
@@ -125,6 +126,7 @@ function NewLocationView() {
             </form>
         </>
    );
+   
 };
 
 export default NewLocationView;

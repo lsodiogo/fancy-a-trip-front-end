@@ -4,15 +4,15 @@ import mockAPIService from "../services/mockAPIService";
 import TravelCards from "../components/TravelCards";
 
 function AllTripsView() {
-   const [travelCard, setTravelCard] = useState([])
+   const [travelCard, setTravelCard] = useState([]);
 
    useEffect(function() {
       (async function() {
-         const result = await mockAPIService.getTravelCardList()
+         const result = await mockAPIService.getTravelCardList();
          
-         setTravelCard(result)
-      })()
-   }, [])
+         setTravelCard(result);
+      })();
+   }, []);
    
    return (
       <>
@@ -24,7 +24,8 @@ function AllTripsView() {
             }
          </div>
       </>
-   )
+   );
+   
 };
 
 export default AllTripsView;

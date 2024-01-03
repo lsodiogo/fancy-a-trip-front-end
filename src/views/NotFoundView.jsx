@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 function NotFoundView() {
+    
     return (
         <>
             <div className="notFoundContainer">
@@ -13,7 +14,8 @@ function NotFoundView() {
                 </Link>
             </div>
         </>
-    )
+    );
+    
 };
 
 export default NotFoundView;

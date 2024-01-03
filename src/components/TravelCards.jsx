@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 function TravelCards({travelInfo}) {
+   
    return (
       <>       
          <Link href={"/trip/" + travelInfo.destination.city}>
@@ -14,7 +15,8 @@ function TravelCards({travelInfo}) {
             </div>
          </Link>
       </>
-   )
+   );
+   
 };
 
 export default TravelCards;

@@ -9,7 +9,7 @@ import mockAPIService from "../services/mockAPIService";
 
 function MapContainer() {
 
-   const [travelCard, setTravelCard] = useState([])
+   const [travelCard, setTravelCard] = useState([]);
 
    useEffect(function() {
       (async function() {
@@ -59,7 +59,7 @@ function MapContainer() {
          </div>
       </>
    );
-};
 
+};
 
 export default MapContainer;

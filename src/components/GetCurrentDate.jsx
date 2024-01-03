@@ -7,11 +7,11 @@ function GetCurrentDate() {
 
    if (day < 10) {
       day = `0${day}`;
-   }
+   };
 
    if (month < 10) {
       month = `0${month}`;
-   }
+   };
 
    let dateFormat = `${year}-${month}-${day}`;
    
@@ -20,6 +20,7 @@ function GetCurrentDate() {
         {dateFormat}
       </>
    );
+   
 };
 
 export default GetCurrentDate;

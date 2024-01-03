@@ -1,5 +1,6 @@
 import { Route, Switch } from "wouter";
 
+import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -9,8 +10,6 @@ import NewLocationView from "./views/NewLocationView";
 import AboutView from "./views/AboutView";
 import DetailedTripView from "./views/DetailedTripView";
 import NotFoundView from "./views/NotFoundView";
-
-import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 
@@ -48,7 +47,8 @@ function App() {
       
       <Footer />
     </>
-  )
+  );
+
 };
 
 export default App;

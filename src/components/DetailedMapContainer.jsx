@@ -13,20 +13,22 @@ function DetailedMapContainer({detailedTrip}) {
       <>
          <div>
             <Map style={{width: "100%", height:"500px", margin:"50px 0"}}
-            mapboxAccessToken= {token}
-            initialViewState={{
-                     latitude: lat,
-                     longitude: lon,
-                     zoom: 5
-                  }}
-                  mapStyle="mapbox://styles/diogooslima/clqshefly00ys01nw2ipqclre">
-                  <Marker latitude={detailedTrip.lat} longitude={detailedTrip.lon} />
-                  
-                  <NavigationControl position="bottom-right" showCompass showZoom/>
+               mapboxAccessToken= {token}
+               initialViewState={{
+                  latitude: lat,
+                  longitude: lon,
+                  zoom: 5
+               }}
+               mapStyle="mapbox://styles/diogooslima/clqshefly00ys01nw2ipqclre">
+               
+               <Marker latitude={detailedTrip.lat} longitude={detailedTrip.lon}/>
+               
+               <NavigationControl position="bottom-right" showCompass showZoom/>
             </Map>
          </div>
       </>
    );
+   
 };
 
 export default DetailedMapContainer;

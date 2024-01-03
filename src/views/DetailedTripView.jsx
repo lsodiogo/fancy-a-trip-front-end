@@ -97,7 +97,8 @@ function DetailedTripView({pathParams}) {
             </div>
          </div>
       </>
-   )
+   );
+   
 };
 
 export default DetailedTripView;

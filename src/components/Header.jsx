@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 function Header() {
+
    return (
       <>
          <header className="header">
@@ -29,7 +30,8 @@ function Header() {
             </div>
          </header>
       </>
-   )
+   );
+   
 };
 
 export default Header;

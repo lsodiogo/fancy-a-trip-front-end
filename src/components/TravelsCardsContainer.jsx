@@ -6,20 +6,20 @@ import TravelCards from "./TravelCards";
 
 function TravelsCardsContainer() {
 
-   const [travelCard, setTravelCard] = useState([])
+   const [travelCard, setTravelCard] = useState([]);
 
    useEffect(function() {
       (async function() {
-         const result = await mockAPIService.getTravelCardList()
+         const result = await mockAPIService.getTravelCardList();
          
-         setTravelCard(result)
-      })()
-   }, [])
+         setTravelCard(result);
+      })();
+   }, []);
 
    const sortedFilteredTravelCard = (travelCard
       .sort((a,b) => a.checkin < b.checkin ? 1:-1)
       .slice(0,3)
-   )
+   );
 
    return (
       <>
@@ -40,7 +40,8 @@ function TravelsCardsContainer() {
             </Link>
          </div>
       </>
-   )
+   );
+   
 };
 
 export default TravelsCardsContainer;

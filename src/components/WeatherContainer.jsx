@@ -1,7 +1,7 @@
 import GetCurrentDate from "./GetCurrentDate";
 
-function WeatherContainer(
-   {detailedTrip, currentWeatherInfo, forecastWeatherInfo}) {  
+function WeatherContainer({detailedTrip, currentWeatherInfo, forecastWeatherInfo}) {  
+      
       return (
       <>
          <div className="tripWeather">
@@ -71,6 +71,7 @@ function WeatherContainer(
          </div>
       </> 
    );
+   
 };
 
 export default WeatherContainer;

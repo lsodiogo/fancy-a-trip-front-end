@@ -1,4 +1,5 @@
 function Hero() {
+
    return (
       <>
          <div className="homepageHero">
@@ -15,7 +16,8 @@ function Hero() {
             </div>
          </div>
       </>
-   )
+   );
+   
 };
 
 export default Hero;

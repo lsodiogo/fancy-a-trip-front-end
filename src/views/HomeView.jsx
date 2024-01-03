@@ -3,6 +3,7 @@ import TravelsCardsContainer from "../components/TravelsCardsContainer";
 import MapContainer from "../components/MapContainer";
 
 function HomeView() {
+   
    return (
       <>
          <Hero/>
@@ -12,7 +13,8 @@ function HomeView() {
 
          <MapContainer/>     
       </>
-   )
+   );
+
 };
 
 export default HomeView;
