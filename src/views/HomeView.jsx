@@ -8,8 +8,10 @@ function HomeView() {
       <>
          <Hero/>
 
-         <h1 className="travelCardsContainerHeader">LATEST</h1>
-         <TravelsCardsContainer/>
+         <div className="travelCardsContainerBorder">
+            <div className="travelCardsContainerHeader">LATEST TRIPS</div>
+            <TravelsCardsContainer/>
+         </div>
 
          <MapContainer/>     
       </>

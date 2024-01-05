@@ -37,16 +37,6 @@ function DetailedTripView({pathParams}) {
          const responseWeatherAPI2 = await fetch(urlForecastWeatherAPI);
          const resultWeatherAPI2 = await responseWeatherAPI2.json();
 
-         /* let objectDate = new Date();
-         let year = objectDate.getFullYear();
-         let month = objectDate.getMonth()+1;
-         let day = objectDate.getDate();
-         let dateFormat = `${year}-0${month}-0${(+day+1)} 00:00:00` */
-
-         /* const newResult = resultWeatherAPI2.list.find(obj => {
-            obj === dateFormat
-         }); */
-
          const newResult = [
             resultWeatherAPI2.list[7],
             resultWeatherAPI2.list[15],
@@ -55,18 +45,14 @@ function DetailedTripView({pathParams}) {
             resultWeatherAPI2.list[39]
          ];
 
-         /* const newResult = [
-            resultWeatherAPI2.list[3],
-            resultWeatherAPI2.list[11]
-         ] */
-
          setForecastWeatherInfo(newResult);
 
       })();
    }, []);
 
 
-   // --- FUNCTION TO AVOID RACE CONDITION --- //
+
+   // FUNCTION TO AVOID RACE CONDITION //
    function checkCoordinatesForMap() {
       if ((detailedTrip.lat && detailedTrip.lon) != undefined) {
          return (
@@ -77,7 +63,6 @@ function DetailedTripView({pathParams}) {
          );
       };
    };
-   // ---------------------------------------- //
 
    return (
       <>
@@ -88,9 +73,7 @@ function DetailedTripView({pathParams}) {
                <p><img src="/images/arrival.svg" alt="arrival-icon"/> {detailedTrip.checkout}</p>
             </div>
 
-            <div /* className="sliderDetailedPage" */>
-               {/* <p>SLIDER HERE</p>
-               <img src={detailedTrip.coverIMG} alt={detailedTrip.destination?.city}/> */}
+            <div>
                <Slider/>
             </div>
 

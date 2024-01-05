@@ -1,12 +1,11 @@
 import * as React from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
-import  Map, { Marker, NavigationControl} from "react-map-gl";
+import  Map, { Marker, NavigationControl } from "react-map-gl";
 
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 
 import mockAPIService from "../services/mockAPIService";
-
 
 function MapContainer() {
 
@@ -19,43 +18,41 @@ function MapContainer() {
          setTravelCard(result);
       })();
    }, []);
-
-
    
+
+
    const token = "pk.eyJ1IjoiZGlvZ29vc2xpbWEiLCJhIjoiY2xxcjRyMXBjMnJxajJpcnlsb2N5Zmp3MSJ9.7OYKXDVANOx-k-Ou4w4G0Q";
 
-   const [centerMap, setCenterMap] = React.useState({
-      latitude: 48,
-      longitude: 2,
-      zoom: 3,
-      interactive: false
-   });
 
-   function handleClick() {
-      return window.location.href = "/trip/" + "Porto";
-      
-      /* if (travelCard.destination?.city != undefined) {
-         return window.location.href = "/trip/" + travelCard.destination.city;
-      }; */
+
+   function handleClick(info) {
+      window.location.href = "/trips/" + info.destination?.city;
    };
 
-   return(
+   return (
       <>
-         <div className="main-map-container">
+         <div className="mainMapContainer">
             <Map
-               {...centerMap}
                mapboxAccessToken={token}
-               onMove={function (state) {
-                  return (
-                     setCenterMap(state.centerMap)
-                  )
-               
+               initialViewState={{
+                  latitude: 48,
+                  longitude: 2,
+                  zoom: 3,
+                  interactive: false
                }}
                mapStyle="mapbox://styles/diogooslima/clqshefly00ys01nw2ipqclre"
             >
       
                {travelCard.map(info =>
-                  <Marker key={info.id} onClick={handleClick} latitude={info.lat} longitude={info.lon}/>
+                  <Marker
+                     key={info.id}
+                     onClick={() => {
+                        handleClick(info)
+                     }}
+                     color="#3A4D39"
+                     latitude={info.lat}
+                     longitude={info.lon}
+                  />
                )}
 
                <NavigationControl position="bottom-right" showCompass showZoom/>

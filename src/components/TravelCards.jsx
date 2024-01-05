@@ -4,7 +4,7 @@ function TravelCards({travelInfo}) {
    
    return (
       <>       
-         <Link href={"/trip/" + travelInfo.destination.city}>
+         <Link href={"/trips/" + travelInfo.destination.city}>
             <div className="travelCard">
                <img className="travelCardImage" src={travelInfo.coverIMG} alt={travelInfo.destination.city}/>
                

@@ -2,13 +2,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const data = [
    {
+      img: "/images/madrid.png"
+   },
+   {
+      img: "/images/luzerne.png"
+   },
+   {
       img: "/images/porto.png"
-   },
-   {
-      img: "/images/lisbon.png"
-   },
-   {
-      img: "/images/brussels.png"
    }
 ];
 

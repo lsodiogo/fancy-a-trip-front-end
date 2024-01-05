@@ -36,13 +36,15 @@ function App() {
           <AboutView />
         </Route>
 
-        <Route path="/trip/:city">
+        <Route path="/trips/:city">
           {params => <DetailedTripView pathParams={params.city}/>}
         </Route>
 
         <Route>
           <NotFoundView />
         </Route>
+
+        {/* <Route component={NotFoundView} /> */}
       </Switch>
       
       <Footer />
