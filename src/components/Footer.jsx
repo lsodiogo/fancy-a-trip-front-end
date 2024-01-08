@@ -11,7 +11,7 @@ function Footer() {
                   <span></span>
                </Link>
 
-               <Link href="#">
+               <Link href="/newlocation">
                   <img src="/images/email.svg" alt="email-icon"/>
                   <span></span>
                </Link>

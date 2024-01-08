@@ -7,19 +7,19 @@ import Slider from "../components/Slider";
 
 function DetailedTripView({pathParams}) {
    
-   const [detailedTrip, setDetailedTrip] = useState({});
+   const [detailedTripData, setDetailedTripData] = useState({});
    const [currentWeatherInfo, setCurrentWeatherInfo] = useState({});
    const [forecastWeatherInfo, setForecastWeatherInfo] = useState([]);
 
    useEffect(function() {
 
       (async function() {
-         const responseMockAPI = await mockAPIService.getTravelCardList();
+         const responseMockAPI = await mockAPIService.getTravelDataList();
          const foundElement = responseMockAPI.find(obj => {
             return obj.destination.city == pathParams;
          });
 
-         setDetailedTrip(foundElement);
+         setDetailedTripData(foundElement);
 
 
 
@@ -54,11 +54,11 @@ function DetailedTripView({pathParams}) {
 
    // FUNCTION TO AVOID RACE CONDITION //
    function checkCoordinatesForMap() {
-      if ((detailedTrip.lat && detailedTrip.lon) != undefined) {
+      if ((detailedTripData.lat && detailedTripData.lon) != undefined) {
          return (
             <DetailedMapContainer
-               key={detailedTrip.id}
-               detailedTrip={detailedTrip}
+               key={detailedTripData.id}
+               detailedTripData={detailedTripData}
             />
          );
       };
@@ -68,13 +68,16 @@ function DetailedTripView({pathParams}) {
       <>
          <div className="mainContainerDetailedPage">
             <div className="titleDetailedPage">
-               <h1>{detailedTrip.destination?.city}, {detailedTrip.destination?.country}</h1>
-               <p><img src="/images/departure.svg" alt="departure-icon"/> {detailedTrip.checkin}</p>
-               <p><img src="/images/arrival.svg" alt="arrival-icon"/> {detailedTrip.checkout}</p>
+               <h1>{detailedTripData.destination?.city}, {detailedTripData.destination?.country}</h1>
+               <p><img src="/images/departure.svg" alt="departure-icon"/> {detailedTripData.checkin}</p>
+               <p><img src="/images/arrival.svg" alt="arrival-icon"/> {detailedTripData.checkout}</p>
             </div>
 
             <div>
-               <Slider/>
+               <Slider
+                  key={detailedTripData.id}
+                  detailedTripData={detailedTripData}
+               />
             </div>
 
             <div>
@@ -83,12 +86,12 @@ function DetailedTripView({pathParams}) {
             
             <div className="infoDetailedPage">
                <div className="tripDescription">
-                  {detailedTrip.description}
+                  {detailedTripData.description}
                </div>
 
                <WeatherContainer
                   key={currentWeatherInfo.id}
-                  detailedTrip={detailedTrip}
+                  detailedTripData={detailedTripData}
                   currentWeatherInfo={currentWeatherInfo}
                   forecastWeatherInfo={forecastWeatherInfo}
                />

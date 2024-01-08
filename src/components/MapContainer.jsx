@@ -9,13 +9,13 @@ import mockAPIService from "../services/mockAPIService";
 
 function MapContainer() {
 
-   const [travelCard, setTravelCard] = useState([]);
+   const [travelData, setTravelData] = useState([]);
 
    useEffect(function() {
       (async function() {
-         const result = await mockAPIService.getTravelCardList();
+         const result = await mockAPIService.getTravelDataList();
          
-         setTravelCard(result);
+         setTravelData(result);
       })();
    }, []);
    
@@ -43,7 +43,7 @@ function MapContainer() {
                mapStyle="mapbox://styles/diogooslima/clqshefly00ys01nw2ipqclre"
             >
       
-               {travelCard.map(info =>
+               {travelData.map(info =>
                   <Marker
                      key={info.id}
                      onClick={() => {

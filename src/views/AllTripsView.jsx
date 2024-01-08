@@ -4,22 +4,22 @@ import mockAPIService from "../services/mockAPIService";
 import TravelCards from "../components/TravelCards";
 
 function AllTripsView() {
-   const [travelCard, setTravelCard] = useState([]);
+   const [travelData, setTravelData] = useState([]);
 
    useEffect(function() {
       (async function() {
-         const result = await mockAPIService.getTravelCardList();
+         const result = await mockAPIService.getTravelDataList();
          
-         setTravelCard(result);
+         setTravelData(result);
       })();
    }, []);
    
    return (
       <>
         <div className="travelCardsContainer">
-            {travelCard
+            {travelData
                .map(item =>
-                  <TravelCards key={item.id} travelInfo={item}/>
+                  <TravelCards key={item.id} travelData={item}/>
                )
             }
          </div>

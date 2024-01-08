@@ -6,17 +6,17 @@ import TravelCards from "./TravelCards";
 
 function TravelsCardsContainer() {
 
-   const [travelCard, setTravelCard] = useState([]);
+   const [travelData, setTravelData] = useState([]);
 
    useEffect(function() {
       (async function() {
-         const result = await mockAPIService.getTravelCardList();
+         const result = await mockAPIService.getTravelDataList();
          
-         setTravelCard(result);
+         setTravelData(result);
       })();
    }, []);
 
-   const sortedFilteredTravelCard = (travelCard
+   const sortedFilteredTravelData = (travelData
       .sort((a,b) => a.checkin < b.checkin ? 1:-1)
       .slice(0,3)
    );
@@ -24,9 +24,9 @@ function TravelsCardsContainer() {
    return (
       <>
          <div className="travelCardsContainer">
-            {sortedFilteredTravelCard
+            {sortedFilteredTravelData
                .map(item =>
-                  <TravelCards key={item.id} travelInfo={item}/>
+                  <TravelCards key={item.id} travelData={item}/>
                )
             }
 

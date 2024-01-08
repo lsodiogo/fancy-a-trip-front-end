@@ -1,6 +1,6 @@
 import GetCurrentDate from "./GetCurrentDate";
 
-function WeatherContainer({detailedTrip, currentWeatherInfo, forecastWeatherInfo}) {  
+function WeatherContainer({detailedTripData, currentWeatherInfo, forecastWeatherInfo}) {  
       
       return (
       <>
@@ -30,7 +30,7 @@ function WeatherContainer({detailedTrip, currentWeatherInfo, forecastWeatherInfo
                   </div>  
 
                   <div className="weatherLocation">
-                     {detailedTrip.destination?.city}, {detailedTrip.destination?.country}
+                     {detailedTripData.destination?.city}, {detailedTripData.destination?.country}
                   </div>
                </div>
             </div>  

@@ -2,12 +2,12 @@ import * as React from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import  Map, { Marker, NavigationControl } from "react-map-gl";
 
-function DetailedMapContainer({detailedTrip}) {
+function DetailedMapContainer({detailedTripData}) {
    
    const token = "pk.eyJ1IjoiZGlvZ29vc2xpbWEiLCJhIjoiY2xxcjRyMXBjMnJxajJpcnlsb2N5Zmp3MSJ9.7OYKXDVANOx-k-Ou4w4G0Q";
 
-   const lat = detailedTrip.lat;
-   const lon = detailedTrip.lon;
+   const lat = detailedTripData.lat;
+   const lon = detailedTripData.lon;
 
    return (
       <>
@@ -24,8 +24,8 @@ function DetailedMapContainer({detailedTrip}) {
                
                <Marker
                   color="#3A4D39"
-                  latitude={detailedTrip.lat}
-                  longitude={detailedTrip.lon}
+                  latitude={detailedTripData.lat}
+                  longitude={detailedTripData.lon}
                />
                
                <NavigationControl position="bottom-right" showCompass showZoom/>

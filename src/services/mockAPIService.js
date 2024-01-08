@@ -1,4 +1,4 @@
-async function getTravelCardList() {
+async function getTravelDataList() {
    const response = await fetch("/mockAPI/mockAPI.json");
    const result = await response.json();
 
@@ -6,5 +6,5 @@ async function getTravelCardList() {
 };
 
 export default {
-   getTravelCardList
+   getTravelDataList
 };

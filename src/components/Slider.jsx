@@ -1,19 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const data = [
-   {
-      img: "/images/madrid.png"
-   },
-   {
-      img: "/images/luzerne.png"
-   },
-   {
-      img: "/images/porto.png"
-   }
-];
+function Slider({detailedTripData}) {
 
-function Slider() {
-   
    return (
       <>
         <div className="sliderContainer">
@@ -23,9 +11,9 @@ function Slider() {
                autoplay={true}
                /* navigation */
             >
-               {data.map( (item) => (
-                  <SwiperSlide key={item.img} className="sliderItem">
-                     <img src={item.img} alt=""/>
+               {detailedTripData.sliderIMG?.map(item => (
+                  <SwiperSlide key={item} className="sliderItem">
+                     <img src={item} alt=""/>
                   </SwiperSlide>
                ))}
             </Swiper>
