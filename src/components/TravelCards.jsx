@@ -1,10 +1,12 @@
 import { Link } from "wouter";
 
+
 function TravelCards({travelData}) {
    
    return (
       <>       
          <Link href={"/trips/" + travelData.destination.city}>
+
             <div className="travelCard">
                <img className="travelCardImage" src={travelData.coverIMG} alt={travelData.destination.city}/>
                
@@ -13,6 +15,7 @@ function TravelCards({travelData}) {
                   <p>{travelData.checkin} → {travelData.checkout}</p>
                </div>
             </div>
+            
          </Link>
       </>
    );

@@ -1,8 +1,15 @@
 import GetCurrentDate from "./GetCurrentDate";
 
 function WeatherContainer({detailedTripData, currentWeatherInfo, forecastWeatherInfo}) {  
-      
-      return (
+
+   function getDayOfWeek(date) {
+      const options = {
+         weekday: "long"
+      };
+      return new Date(date).toLocaleDateString("en-US", options);
+   };
+    
+   return (
       <>
          <div className="tripWeather">
             <div className="weatherTitle">
@@ -47,7 +54,7 @@ function WeatherContainer({detailedTripData, currentWeatherInfo, forecastWeather
                {forecastWeatherInfo?.map(item => 
                   <div key={item.dt} className="forecastCard">
                      <div className="forecastTopCard">
-                        <p>{item.dt_txt.substring(0,10)}</p>
+                        <p>{item.dt_txt.substring(0,10)}, {getDayOfWeek(item.dt_txt.substring(0,10))}</p>
                      </div>
 
                      <div className="forecastBottomCard">

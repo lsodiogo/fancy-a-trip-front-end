@@ -9,7 +9,7 @@ function Slider({detailedTripData}) {
                slidesPerView={1}
                pagination={{clickable: true}}
                autoplay={true}
-               /* navigation */
+               navigation               
             >
                {detailedTripData.sliderIMG?.map(item => (
                   <SwiperSlide key={item} className="sliderItem">

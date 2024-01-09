@@ -52,7 +52,7 @@ function DetailedTripView({pathParams}) {
 
 
 
-   // FUNCTION TO AVOID RACE CONDITION //
+   // CONDITIONAL RENDERING TO AVOID RACE CONDITION //
    function checkCoordinatesForMap() {
       if ((detailedTripData.lat && detailedTripData.lon) != undefined) {
          return (
