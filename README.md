@@ -21,7 +21,7 @@ Various features will be added as the project develops.
 |All trips page| | | x |
 | |
 |Detailed travel location page: home| | | x |
-|Detailed travel location page: slideshow of images| | x | |
+|Detailed travel location page: slideshow of images| | | x |
 |Detailed travel location page: map| | | x |
 |Detailed travel location page: description of travel| | | x |
 |Detailed travel location page: weather| | | x |
