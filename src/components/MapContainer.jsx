@@ -1,6 +1,6 @@
 import * as React from "react";
-import "mapbox-gl/dist/mapbox-gl.css";
 import  Map, { Marker, NavigationControl } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 import { useEffect, useState } from "react";
 import { Link } from "wouter";

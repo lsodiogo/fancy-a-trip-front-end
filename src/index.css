@@ -220,7 +220,7 @@ body {
 .mainMapContainer{
    width: 90%;
    height: 500px;
-   margin: 15% auto;
+   margin: 5% auto;
 }
 /* -------------------------------------------------- */
 
@@ -322,6 +322,7 @@ body {
 
 .formSuggestion .formSuggestionInput {
    color: #000000;
+   letter-spacing: 1px;
    
    margin-bottom: 15px;
    padding: 15px;

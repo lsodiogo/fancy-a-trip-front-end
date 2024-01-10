@@ -4,26 +4,44 @@ import countriesAPIService from "../services/countriesAPIService";
 
 function NewLocationView() {
     
-    const [getDataCountry, setgetDataCountry] = useState([]);
-
-    useEffect(function() {
-        (async function() {
-            const result = await countriesAPIService.getCountry();
-           
-            setgetDataCountry(result);
-        })();
-    }, []);
-
-    
-
     const [formData, setFormData] = useState({
         country: "",
         city: "",
-        dateFrom: Date,
-        dateTo: Date,
+        dateFrom: new Date(new Date().setDate(new Date().getDate() + 1)).toISOString().split("T")[0],
+        dateTo: "",
         description: "",
     });
 
+    const [getDataCountry, setGetDataCountry] = useState([]);
+    const [getDataCities, setGetDataCities] = useState([]);
+
+
+
+   // GET COUNTRY LIST // 
+    useEffect(function() {
+        (async function() {
+            const result = await countriesAPIService.getCountriesAPIData();
+           
+            setGetDataCountry(result);
+        })();
+    }, []);
+
+
+
+    // GET CITIES LIST OF THE COUNTRY SELECTED // 
+    const handleChangeCountry = async (event) => {
+        const selectedCountry = event.target.value;
+
+        const result = await countriesAPIService.getCountriesAPIData();
+        const foundElement = result.find(obj => {
+            return obj.country == selectedCountry;
+        });
+
+        setGetDataCities(foundElement.cities);
+    };
+
+
+    
     const handleChange = (event) => {
         event.preventDefault();
         const { name, value } = event.target;
@@ -35,6 +53,12 @@ function NewLocationView() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        if (formData.country === "" || formData.city === "") {
+            alert("Please fill in both country and city fields.");
+            return;
+        }
+
         console.log("SUGGESTION ACCEPTED: ", formData);
     };
 
@@ -55,8 +79,14 @@ function NewLocationView() {
                             className="formSuggestionInput"
                             type="text" 
                             name="country"
-                            onChange={handleChange}>
-                            <option selected disabled>Select country</option>
+                            onChange={event => {
+                                handleChange(event);
+                                handleChangeCountry(event);
+                            }}
+                        >
+                            <option selected disabled>
+                                Select country
+                            </option>
                             {getDataCountry.map((item, index) =>
                                 <option key={index}>
                                     {item.country}
@@ -71,17 +101,16 @@ function NewLocationView() {
                             className="formSuggestionInput"
                             type="text" 
                             name="city"
-                            onChange={handleChange}>
-                            <option selected disabled>Select city</option>
-                            {/* {getDataCountry
-                                .filter(item => item === "Haiti")
-                                .map((item, index) =>
-                                    <option key={index}>
-                                        {item.country.cities}
-                                        {console.log(item.country)}
-                                    </option>
-                                )
-                            } */}
+                            onChange={handleChange}
+                        >
+                            <option selected disabled>
+                                Select city
+                            </option>
+                            {getDataCities.map((item, index) =>
+                                <option key={index}>
+                                    {item}
+                                </option>
+                            )}
                         </select>
                     </label>
 
@@ -91,6 +120,7 @@ function NewLocationView() {
                             className="formSuggestionInput"
                             type="date" 
                             name="dateFrom"
+                            min={formData.dateFrom}
                             onChange={handleChange}
                         />
                     </label>
@@ -101,6 +131,7 @@ function NewLocationView() {
                             className="formSuggestionInput"
                             type="date" 
                             name="dateTo"
+                            min={formData.dateFrom}
                             onChange={handleChange}
                         />
                     </label>
@@ -109,10 +140,10 @@ function NewLocationView() {
                         Description:
                         <textarea
                             className="formSuggestionInput"
-                            rows="5"
-                            cols="25"
                             type="text" 
                             name="description"
+                            rows="5"
+                            cols="25"
                             onChange={handleChange}
                         />
                     </label>

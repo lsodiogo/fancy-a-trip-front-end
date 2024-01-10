@@ -1,4 +1,4 @@
-async function getCountry() {
+async function getCountriesAPIData() {
    const response = await fetch("https://countriesnow.space/api/v0.1/countries");
    const result = await response.json();
 
@@ -6,5 +6,5 @@ async function getCountry() {
 };
 
 export default {
-   getCountry
+   getCountriesAPIData
 };
