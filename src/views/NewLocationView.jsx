@@ -41,8 +41,8 @@ function NewLocationView() {
    return (
         <>
             <div className="topContainerSuggestionPage">
-                <img className="imageSuggestionPage" src="/images/map5.jpeg" alt="map"/>
-                <div className="titleSuggestionPage">What trip should I do next?</div>
+                <img className="imageSuggestionPage" src="/images/map5.jpeg" alt="worldMap"/>
+                <div className="titleSuggestionPage">What trip should we do next?</div>
             </div>
             <form className="formSuggestion" onSubmit={handleSubmit}>
                 
