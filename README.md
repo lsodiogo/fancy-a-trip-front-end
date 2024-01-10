@@ -28,6 +28,6 @@ Various features will be added as the project develops.
 | |
 |New travel location page: form| | x | |
 | |
-|Traveler/author page: personal info| | x | |
+|Traveler/author page: personal info| | | x |
 | |
 |Page not found| | | x |
