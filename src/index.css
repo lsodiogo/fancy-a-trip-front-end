@@ -375,6 +375,17 @@ a.header-left:hover {
    background-color: var(--hover-color);
    color: var(--background-primary-color);
 }
+
+.obligatory {
+   color: #F27C87;
+}
+
+.fieldsRequired {
+   background-color: #F8D7DA;
+   line-height: 50px;
+   border-radius: 10px;
+   margin-bottom: 10px;
+}
 /* -------------------------------------------------- */
 
 
