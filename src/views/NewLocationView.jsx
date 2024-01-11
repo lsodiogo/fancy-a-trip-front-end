@@ -92,7 +92,7 @@ function NewLocationView() {
    return (
         <>
             <div className="topContainerSuggestionPage">
-                <img className="imageSuggestionPage" src="/images/map5.jpeg" alt="worldMap"/>
+                <img className="imageSuggestionPage" src="/images/map5.jpeg" alt="world-map-illustration"/>
                 <div className="titleSuggestionPage">What trip should we do next?</div>
             </div>
 
@@ -180,17 +180,18 @@ function NewLocationView() {
                             className="formSuggestionSubmit"
                             type="submit"
                             name="submit"
-                            value="SAVE"
+                            value="SUBMIT"
                         />
                     </label>
-                    <label>
+
+                    {/* <label>
                         <input
                             className="formSuggestionSubmit"
                             type="reset"
                             name="reset"
                             value="RESET"
                         />
-                    </label>
+                    </label> */}
                 </fieldset>
             </form>
         </>

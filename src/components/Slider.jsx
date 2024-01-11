@@ -21,7 +21,7 @@ function Slider({detailedTripData}) {
             >
                {detailedTripData.sliderIMG?.map(item => (
                   <SwiperSlide key={item} className="sliderItem">
-                     <img src={item} alt=""/>
+                     <img src={item} alt={detailedTripData.destination.city}/>
                   </SwiperSlide>
                ))}
             </Swiper>

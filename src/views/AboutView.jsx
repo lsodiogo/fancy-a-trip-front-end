@@ -4,7 +4,7 @@ function AboutView() {
       <>
          <div className="aboutContainer">
             <div className="aboutPhoto">
-               <img src="/images/me.jpeg" alt="photoOfMyself"/>
+               <img src="/images/me.jpeg" alt="photo-of-myself"/>
             </div>
             <div className="aboutText">
                <h1>HELLO THERE!</h1>

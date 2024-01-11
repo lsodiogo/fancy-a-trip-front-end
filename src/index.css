@@ -2,10 +2,26 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css');
 
+
+
+:root {
+  --primary-color: #739072;
+  --secondary-color: #AFC8AD;
+  --background-primary-color: #EEE7DA;
+  --background-secondary-color: #F2F1EB;
+  --black-color: #000000;
+  --hover-color: #88AB8E;
+  --shadow-color: #CCCCCC;
+}
+
+
+
 /*    font-family: 'Afacad', sans-serif; */
 /*    font-family: 'Lato', sans-serif; */
 /*    font-family: 'Montserrat', sans-serif; */
 /*    font-family: 'Roboto', sans-serif; */
+
+
 
 /* -------------------------------------------------- */
 * {
@@ -17,7 +33,7 @@
 body {
    font-family: 'Montserrat', sans-serif;
    font-weight: 200;
-   background-color: #EEE7DA;
+   background-color: var(--background-primary-color);
 }
 /* -------------------------------------------------- */
 
@@ -39,7 +55,7 @@ body {
 
 .header a {
    float: left;
-   color: #000000;
+   color: var(--black-color);
 
    padding: 20px;
    
@@ -49,21 +65,25 @@ body {
    letter-spacing: 1px;
 }
 
-.header a.header-left {
+a.header-left {
    font-size: 30px;
    font-weight: none;
    letter-spacing: 10px;
 }
 
-.header a:hover {
-   background-color: #88AB8E;
-   color: #EEE7DA;
-   border-radius: 10px;
-   /* transition: all 2s ease; */
-}
-
 .header-right {
    float: right;
+}
+
+a:hover, a.active {
+   background-color: var(--hover-color);
+   color: var(--background-primary-color);
+   border-radius: 10px;
+}
+
+a.header-left:hover {
+   background-color: transparent;
+   color: var(--background-primary-color);
 }
 
 @media screen and (max-width: 1060px) {
@@ -100,7 +120,7 @@ body {
 
 .homepageHero p {
    font-size: 94px;
-   text-shadow: 3px 3px 3px #CCCCCC;
+   text-shadow: 3px 3px 3px var(--shadow-color);
 
    padding: 30px 0px;
 
@@ -146,7 +166,7 @@ body {
 
 /* --------------------- CARDS ---------------------- */
 .travelCardsContainerBorder {
-   background-color: #F2F1EB;
+   background-color: var(--background-secondary-color);
    border-radius: 10px;
    width: 90%;
    margin: 0 auto;
@@ -172,7 +192,7 @@ body {
 
 .travelCard {
    background-color: #ECE3CE;
-   border: 1px solid #000000;
+   border: 1px solid var(--black-color);
    border-radius: 10px;
    
    width: 275px;
@@ -184,7 +204,7 @@ body {
 
    cursor: pointer;
 
-   box-shadow: 0 0 15px 1px #CCCCCC;
+   box-shadow: 0 0 15px 1px var(--shadow-color);
 }
 
 .travelCardImage {
@@ -208,7 +228,7 @@ body {
 }
 
 .travelCard:hover {
-   background-color: #EEE7DA;
+   background-color: var(--background-primary-color);
    opacity: 0.5;
    transform: scale(1.1);
 }
@@ -228,7 +248,7 @@ body {
 
 /* --------------------- FOOTER --------------------- */
 .footer {
-   background-color: #F2F1EB;
+   background-color: var(--background-secondary-color);
    padding: 30px 0;
 }
 
@@ -256,7 +276,7 @@ body {
 
 .footer .socialMedia a:hover {
    opacity: 0.5;
-   background-color: #EEE7DA;
+   background-color: var(--background-primary-color);
 }
 
 .footer .copyright {
@@ -311,31 +331,31 @@ body {
 
    border: none;
    border-radius: 5%;
-   box-shadow: 0 0 15px 1px #CCCCCC;
+   box-shadow: 0 0 15px 1px var(--shadow-color);
    box-sizing: border-box;
 }
 
 .formSuggestion h2 {
    margin-bottom: 30px;
-   border-bottom: 1px solid #CCCCCC;
+   border-bottom: 1px solid var(--shadow-color);
 }
 
 .formSuggestion .formSuggestionInput {
-   color: #000000;
+   color: var(--black-color);
    letter-spacing: 1px;
    
    margin-bottom: 15px;
    padding: 15px;
    width: 100%;
 
-   border: 1px solid #CCCCCC;
+   border: 1px solid var(--shadow-color);
    border-radius: 10px;
    box-sizing: border-box; 
 }
 
 .formSuggestion .formSuggestionSubmit {
-   background: #AFC8AD;
-   color: #EEE7DA;
+   background: var(--secondary-color);
+   color: var(--background-primary-color);
 
    margin: 10px;
    padding: 10px;
@@ -352,8 +372,8 @@ body {
 }
 
 .formSuggestion .formSuggestionSubmit:hover {
-   background-color: #88AB8E;
-   color: #EEE7DA;
+   background-color: var(--hover-color);
+   color: var(--background-primary-color);
 }
 /* -------------------------------------------------- */
 
@@ -384,11 +404,11 @@ body {
    letter-spacing: 5px;
    font-size: 50px;
    text-transform: uppercase;
-   text-shadow: 5px 3px 1px #CCCCCC;
+   text-shadow: 5px 3px 1px var(--shadow-color);
 }
 
 .titleDetailedPage p {
-   background-color: #739072;
+   background-color: var(--primary-color);
    color: #FFFFFF;
    text-shadow: none;
    margin: auto;
@@ -451,7 +471,7 @@ body {
 
 /* ------------- DETAILED PAGE: WEATHER ------------- */
 .tripWeather {
-   background-color: #739072;
+   background-color: var(--primary-color);
    font-family: Poiret One;
    letter-spacing: 5px;
    height: 100%;
@@ -473,7 +493,7 @@ body {
    height: 40%;
    padding: 20px;
    border-radius: 20px 20px 0px 0px;
-   background: #F2F1EB;
+   background-color: var(--background-secondary-color);
 
    display: flex;
    align-items: center;
@@ -483,7 +503,7 @@ body {
 }
 
 .weatherIcon {
-   background-color: #AFC8AD;
+   background-color: var(--secondary-color);
    border-radius: 10px;
 }
 
@@ -516,7 +536,7 @@ body {
    margin: 0px 0px 50px;
    text-align: center;
    
-   background-color: #739072;
+   background-color: var(--primary-color);
    font-family: Poiret One;
    letter-spacing: 5px;
    border-radius: 20px;
@@ -528,7 +548,7 @@ body {
 }
 
 .forecastInfo {
-   background-color: #AFC8AD;
+   background-color: var(--secondary-color);
    display: flex;
    gap: 10px;
    align-items: center;
@@ -543,7 +563,7 @@ body {
    padding: 15px;
    height: 100%;
    width: 100%;
-   background-color: #F2F1EB;
+   background-color: var(--background-secondary-color);
    border-radius: 10px;
 }
 
@@ -562,7 +582,7 @@ body {
 }
 
 .forecastLeftCard {
-   background-color: #AFC8AD;
+   background-color: var(--secondary-color);
    border-radius: 10px;
 }
 
@@ -639,8 +659,8 @@ body {
 }
 
 .notFoundContainer span:hover {
-   background-color: #88AB8E;
-   color: #EEE7DA;
+   background-color: var(--hover-color);
+   color: var(--background-primary-color);
 }
 /* -------------------------------------------------- */
 

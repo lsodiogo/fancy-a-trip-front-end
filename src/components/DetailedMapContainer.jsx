@@ -4,7 +4,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 function DetailedMapContainer({detailedTripData}) {
    
-   const token = "pk.eyJ1IjoiZGlvZ29vc2xpbWEiLCJhIjoiY2xxcjRyMXBjMnJxajJpcnlsb2N5Zmp3MSJ9.7OYKXDVANOx-k-Ou4w4G0Q";
+   const myToken = "pk.eyJ1IjoiZGlvZ29vc2xpbWEiLCJhIjoiY2xxcjRyMXBjMnJxajJpcnlsb2N5Zmp3MSJ9.7OYKXDVANOx-k-Ou4w4G0Q";
 
    const lat = detailedTripData.lat;
    const lon = detailedTripData.lon;
@@ -13,14 +13,15 @@ function DetailedMapContainer({detailedTripData}) {
       <>
          <div className="detailedMapContainer">
             <Map 
-               mapboxAccessToken={token}
+               mapboxAccessToken={myToken}
+               mapStyle="mapbox://styles/diogooslima/clqshefly00ys01nw2ipqclre"
                initialViewState={{
                   latitude: lat,
                   longitude: lon,
                   zoom: 5,
                   interactive: false
                }}
-               mapStyle="mapbox://styles/diogooslima/clqshefly00ys01nw2ipqclre">
+            >
                
                <Marker
                   color="#3A4D39"

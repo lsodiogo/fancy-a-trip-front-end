@@ -12,7 +12,7 @@ function Footer() {
                </Link>
 
                <Link href="/newlocation">
-                  <img src="/images/email.svg" alt="email-icon"/>
+                  <img src="/images/envelope.svg" alt="envelope-icon"/>
                   <span></span>
                </Link>
 
@@ -20,11 +20,21 @@ function Footer() {
                   <img src="/images/instagram.svg" alt="instagram-icon"/>
                   <span></span>
                </a>
+
+               <a href="https://www.linkedin.com/in/diogooslima/">
+                  <img src="/images/linkedin.svg" alt="linkedin-icon"/>
+                  <span></span>
+               </a>
+
+               <a href="https://www.github.com/lsodiogo/">
+                  <img src="/images/github.svg" alt="github-icon"/>
+                  <span></span>
+               </a>
             </div>
 
             <p className="copyright">
                Diogo Lima @ 2024
-               <br /><br />
+               <br/><br/>
                Images used on this website are for illustrative purposes only and all credits belong to their original authors.
             </p>
          </footer>

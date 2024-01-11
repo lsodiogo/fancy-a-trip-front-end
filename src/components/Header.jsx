@@ -1,32 +1,44 @@
-import { Link } from "wouter";
+import { Link, useRoute } from "wouter";
 
 function Header() {
+
+   // FUNCTION TO ADD CSS WHEN LINK IS ACTIVE //
+   function LinkActivated(event) {
+      const [isActive] = useRoute(event.href);
+      return (
+         <Link {...event}>
+            <a className={isActive ? "active" : ""}>
+               {event.children}
+            </a>
+         </Link>
+      );
+   };
 
    return (
       <>
          <header className="header">
-            <Link className="header-left" to="/">FANCY A TRIP</Link>
+            <Link href="/" className="header-left">FANCY A TRIP</Link>
 
             <div className="header-right">
-               <Link href="/">
+               <LinkActivated href="/">
                   <img src="/images/home.svg" alt="home-icon"/>
                   <span> HOME</span>
-               </Link>
+               </LinkActivated>
 
-               <Link href="/alltrips">
+               <LinkActivated href="/alltrips">
                   <img src="/images/suitcase.svg" alt="suitcase-icon"/>
                   <span> ALL TRIPS</span>
-               </Link>
+               </LinkActivated>
                
-               <Link href="/newlocation">
+               <LinkActivated href="/newlocation">
                   <img src="/images/plane.svg" alt="plane-icon"/>
                   <span> TRIP SUGGESTION</span>
-               </Link>
+               </LinkActivated>
 
-               <Link href="/about">
+               <LinkActivated href="/about">
                   <img src="/images/user.svg" alt="user-icon"/>
                   <span> THE TRAVELER</span>
-               </Link>
+               </LinkActivated>
             </div>
          </header>
       </>

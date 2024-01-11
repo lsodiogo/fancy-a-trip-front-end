@@ -6,14 +6,14 @@ function HomeView() {
    
    return (
       <>
-         <Hero/>
+         <Hero />
 
          <div className="travelCardsContainerBorder">
             <div className="travelCardsContainerHeader">LATEST TRIPS</div>
-            <TravelsCardsContainer/>
+            <TravelsCardsContainer />
          </div>
 
-         <MapContainer/>     
+         <MapContainer />  
       </>
    );
 
