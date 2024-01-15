@@ -14,17 +14,19 @@ Various features will be added as the project develops.
 |Git| | | x |
 | |
 |Homepage: header and footer| | | x |
-|Homepage: home/hero| | | x |
-|Homepage: list of travel locations| | | x |
+|Homepage: hero| | | x |
+|Homepage: list of latest travel locations| | | x |
 |Homepage: map| | | x |
 | |
-|All trips page| | | x |
+|All trips page: sort button| | | x |
+|All trips page: all list of travel locations| | | x |
 | |
-|Detailed travel location page: home| | | x |
+|Detailed travel location page: home title| | | x |
 |Detailed travel location page: slideshow of images| | | x |
-|Detailed travel location page: map| | | x |
 |Detailed travel location page: description of travel| | | x |
 |Detailed travel location page: weather| | | x |
+|Detailed travel location page: forecast| | | x |
+|Detailed travel location page: map| | | x |
 | |
 |New travel location page: form| | | x |
 | |
