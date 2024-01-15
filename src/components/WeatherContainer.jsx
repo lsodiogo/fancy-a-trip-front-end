@@ -13,7 +13,7 @@ function WeatherContainer({detailedTripData}) {
 
       (async function() {
          
-         const urlCurrentWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${detailedTripData.lat}&lon=${detailedTripData.lon}&exclude=current&units=metric&appid=${import.meta.env.VITE_OPENWEATHER_API_KEY}`;
+         const urlCurrentWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${detailedTripData.lat}&lon=${detailedTripData.lon}&exclude=current&units=metric&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a`;
 
          const responseCurrentWeatherAPI = await fetch(urlCurrentWeatherAPI);
          const resultCurrentWeatherAPI = await responseCurrentWeatherAPI.json();
@@ -22,7 +22,7 @@ function WeatherContainer({detailedTripData}) {
          
          
          
-         const urlForecastWeatherAPI = `https://api.openweathermap.org/data/2.5/forecast?&lat=${detailedTripData.lat}&lon=${detailedTripData.lon}&exclude=current&units=metric&appid=${import.meta.env.VITE_OPENWEATHER_API_KEY}`;
+         const urlForecastWeatherAPI = `https://api.openweathermap.org/data/2.5/forecast?&lat=${detailedTripData.lat}&lon=${detailedTripData.lon}&exclude=current&units=metric&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a`;
 
          const responseForecastWeatherAPI = await fetch(urlForecastWeatherAPI);
          const resultForecastWeatherAPI = await responseForecastWeatherAPI.json();

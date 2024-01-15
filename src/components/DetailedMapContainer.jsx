@@ -8,8 +8,8 @@ import mapZoomQueryScreenSize from "../services/mapZoomQueryScreenSize";
 
 function DetailedMapContainer({detailedTripData}) {
    
-   const myMapBoxToken = import.meta.env.VITE_MAPBOX_API_KEY;
-   const myMapBoxStyle = import.meta.env.VITE_MAPBOX_MAP_STYLE;
+   const myMapBoxToken = "pk.eyJ1IjoiZGlvZ29vc2xpbWEiLCJhIjoiY2xxcjRseThkM3J1bjJpdGt2MXVhdG9pMiJ9.991yiag4Ybxw7PD3LR4q4Q";
+   const myMapBoxStyle = "mapbox://styles/diogooslima/clrcfnuum009w01pdhx8k1gg9";
 
    const lat = detailedTripData.lat;
    const lon = detailedTripData.lon;
