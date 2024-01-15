@@ -64,8 +64,6 @@ body {
    background: rgb(242,241,239);
    background: linear-gradient(0deg, rgba(242,241,239,1) 0%, rgba(177,166,164,1) 100%);
 
-   padding: 0px 15px;
-
    overflow: hidden;
    position: sticky;
    z-index: 10000;
@@ -112,6 +110,7 @@ a.header-left:hover {
       display: block;
       text-align: center;
       justify-content: center;
+      line-height: 50px;
    }
    .header-right {
       display: flex;
@@ -119,7 +118,9 @@ a.header-left:hover {
       justify-content: center;
    }
    a.header-left {
+      line-height: 80px;
       width: 100%;
+      font-size: 20px;
    }
 }
 
@@ -390,6 +391,7 @@ a.header-left:hover {
    display: flex;
    align-items: center;
    justify-content: center;
+   text-align: center;
    margin: 50px auto 0;
 }
 

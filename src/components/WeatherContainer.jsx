@@ -27,26 +27,30 @@ function WeatherContainer({detailedTripData}) {
          const responseForecastWeatherAPI = await fetch(urlForecastWeatherAPI);
          const resultForecastWeatherAPI = await responseForecastWeatherAPI.json();
 
+         const today = new Date().toISOString().substring(0, 10);
          const differentDays = resultForecastWeatherAPI.list.reduce((daysArray, item) => {
 
             const date = item.dt_txt.substring(0, 10);
-            const dayInfo = daysArray.find(obj => obj.date === date);
-    
-            if (!dayInfo) {
-               daysArray.push(
-                  {
-                     id: item.dt,
-                     date: date,
-                     min: item.main.temp,
-                     max: item.main.temp,
-                     description: item.weather?.[0].main,
-                     icon: item.weather[0].icon
-                  }
-               );
-               
-            } else {
-              dayInfo.min = Math.min(dayInfo.min, item.main.temp_min);
-              dayInfo.max = Math.max(dayInfo.max, item.main.temp_max);
+
+            if (date !== today) {
+               const dayInfo = daysArray.find(obj => obj.date === date);
+      
+               if (!dayInfo) {
+                  daysArray.push(
+                     {
+                        id: item.dt,
+                        date: date,
+                        min: item.main.temp,
+                        max: item.main.temp,
+                        description: item.weather?.[0].main,
+                        icon: item.weather[0].icon
+                     }
+                  );
+                  
+               } else {
+               dayInfo.min = Math.min(dayInfo.min, item.main.temp_min);
+               dayInfo.max = Math.max(dayInfo.max, item.main.temp_max);
+               };
             };
     
             return daysArray;
@@ -117,9 +121,7 @@ function WeatherContainer({detailedTripData}) {
             </div>
             
             <div className="forecastInfo">
-               {forecastWeatherInfo
-                  .slice(1,6)
-                  .map(item =>
+               {forecastWeatherInfo.map(item =>
                      <div key={item.id} className="forecastCard">
                         <div className="forecastTopCard">
                            <p>{item.date}, {getDayOfWeek(item.date)}</p>
