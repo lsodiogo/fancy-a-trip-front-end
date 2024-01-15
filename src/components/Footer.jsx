@@ -1,5 +1,7 @@
 import { Link } from "wouter";
 
+
+
 function Footer() {
 
    return (
@@ -7,7 +9,7 @@ function Footer() {
          <footer className="footer">
             <div className="socialMedia">
                <Link href="/">
-                  <img src="/images/home.svg" alt="home-icon" />
+                  <img src="/images/home2.svg" alt="home-icon" />
                   <span></span>
                </Link>
 

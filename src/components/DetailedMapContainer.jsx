@@ -2,9 +2,14 @@ import * as React from "react";
 import  Map, { Marker, NavigationControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+import mapZoomQueryScreenSize from "../services/mapZoomQueryScreenSize";
+
+
+
 function DetailedMapContainer({detailedTripData}) {
    
-   const myToken = "pk.eyJ1IjoiZGlvZ29vc2xpbWEiLCJhIjoiY2xxcjRyMXBjMnJxajJpcnlsb2N5Zmp3MSJ9.7OYKXDVANOx-k-Ou4w4G0Q";
+   const myMapBoxToken = import.meta.env.VITE_MAPBOX_API_KEY;
+   const myMapBoxStyle = import.meta.env.VITE_MAPBOX_MAP_STYLE;
 
    const lat = detailedTripData.lat;
    const lon = detailedTripData.lon;
@@ -13,23 +18,21 @@ function DetailedMapContainer({detailedTripData}) {
       <>
          <div className="detailedMapContainer">
             <Map 
-               mapboxAccessToken={myToken}
-               mapStyle="mapbox://styles/diogooslima/clqshefly00ys01nw2ipqclre"
+               mapboxAccessToken={myMapBoxToken}
+               mapStyle={myMapBoxStyle}
                initialViewState={{
                   latitude: lat,
                   longitude: lon,
-                  zoom: 5,
-                  interactive: false
+                  zoom: mapZoomQueryScreenSize.getMapZoom(),
+                  interactive: true
                }}
             >
                
                <Marker
-                  color="#3A4D39"
+                  color="#697184"
                   latitude={detailedTripData.lat}
                   longitude={detailedTripData.lon}
                />
-               
-               <NavigationControl position="bottom-right" showCompass showZoom/>
             </Map>
          </div>
       </>

@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCube, Pagination } from 'swiper/modules';
 
+
+
 function Slider({detailedTripData}) {
 
    return (

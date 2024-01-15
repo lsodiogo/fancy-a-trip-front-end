@@ -11,6 +11,8 @@ import AboutView from "./views/AboutView";
 import DetailedTripView from "./views/DetailedTripView";
 import NotFoundView from "./views/NotFoundView";
 
+
+
 function App() {
 
   return (

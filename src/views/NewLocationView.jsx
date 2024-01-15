@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 
 import countriesAPIService from "../services/countriesAPIService";
 
+
+
 function NewLocationView() {
     
     const [formData, setFormData] = useState({
@@ -15,8 +17,7 @@ function NewLocationView() {
     const [getDataCountry, setGetDataCountry] = useState([]);
     const [getDataCities, setGetDataCities] = useState([]);
     const [fieldsRequired, setFieldsRequired] = useState(false);
-    const [disabledCountryCityOption, setDisabledCountryCityOption] = useState(true);
-    const [disabledCityOption, setDisabledCityOption] = useState(true);
+    const [suggestionSubmitted, setSuggestionSubmitted] = useState(false);
 
     // GET THE SOONEST DATE TO TRAVEL WHICH DECIDED BY ME IS TOMORROW //
     const getSoonestDate = new Date(new Date().setDate(new Date().getDate() + 1)).toISOString().split("T")[0];
@@ -52,10 +53,8 @@ function NewLocationView() {
         event.preventDefault();
         const { name, value } = event.target;
         
-        if (formData.country || formData.city) {
-            setDisabledCountryCityOption(false);
-        };
         setFieldsRequired(false);
+        setSuggestionSubmitted(false);
         setFormData(data => ({ ...data, [name]: value }));
     };
 
@@ -67,13 +66,15 @@ function NewLocationView() {
         // CONDITION TO USER ALWAYS ENTER A COUNTRY AND A CITY //
         if (formData.country === "" || formData.city === "") {
             setFieldsRequired(true);
+            setSuggestionSubmitted(false);
             return;
         };
 
         // CONDITION TO CHECKIN DATE BE THE SOONEST WHEN IN BLANK //
         if (!formData.dateFrom) {
             formData.dateFrom = getSoonestDate;
-        }
+        };
+
         // CONDITION TO CHECKOUT DATE BE THE SAME AS CHECKIN DATE WHEN IN BLANK //
         if (!formData.dateTo) {
             formData.dateTo = formData.dateFrom;
@@ -87,8 +88,8 @@ function NewLocationView() {
         console.log("SUGGESTION ACCEPTED: ", formData);
 
         // CONDITION TO CLEAN OUTPUT //
-        setDisabledCountryCityOption(true);
         setFieldsRequired(false);
+        setSuggestionSubmitted(true);
         setFormData({
             country: "",
             city: "",
@@ -98,12 +99,17 @@ function NewLocationView() {
         });
     };
 
+
+    
+    // CONDITION TO CHANGE INPUT BOX COLOR WHEN FIELD IN BLANK //
+    const backgroundCountryEmpty = fieldsRequired && formData.country === "" ? "formSuggestionInput backgroundFieldsRequired" : "formSuggestionInput";
+
+    const backgroundCityEmpty = (fieldsRequired && formData.country === "") || (fieldsRequired && formData.city === "" && formData.country) ? "formSuggestionInput backgroundFieldsRequired" : "formSuggestionInput";
+
    return (
         <>
-            <div className="topContainerSuggestionPage">
-                <img className="imageSuggestionPage" src="/images/map5.jpeg" alt="world-map-illustration"/>
-                <div className="titleSuggestionPage">What trip should we do next?</div>
-            </div>
+            <div className="mainContainerSuggestionPage">
+                <img className="imageSuggestionPage" src="/images/worldmap.png" alt="world-map-illustration"/>            
 
             <form
                 className="formSuggestion" 
@@ -115,17 +121,16 @@ function NewLocationView() {
                     <label>
                         Country<span className="obligatory">*</span>
                         <select required
-                            className="formSuggestionInput"
+                            className={backgroundCountryEmpty}
                             type="text" 
                             name="country"
+                            value={formData.country}
                             onChange={event => {
                                 handleChange(event);
                                 handleChangeCountry(event);
                             }}
                         >
-                            {disabledCountryCityOption && <option selected disabled>
-                                select country
-                            </option>}
+                            <option>select country</option>
                             {getDataCountry.map((item, index) =>
                                 <option key={index}>
                                     {item.country}
@@ -137,14 +142,13 @@ function NewLocationView() {
                     <label>
                         City<span className="obligatory">*</span>
                         <select required
-                            className="formSuggestionInput"
+                            className={backgroundCityEmpty}
                             type="text" 
                             name="city"
+                            value={formData.city}
                             onChange={event => handleChange(event)}
                         >
-                            {disabledCountryCityOption && <option selected disabled>
-                                select city
-                            </option>}
+                            <option>select city</option>
                             {getDataCities.map((item, index) =>
                                 <option key={index}>
                                     {item}
@@ -194,7 +198,7 @@ function NewLocationView() {
                         * fields required!
                     </div>}
 
-                    <label>
+                    <div>
                         <button
                             className="formSuggestionSubmit"
                             type="submit"
@@ -202,18 +206,14 @@ function NewLocationView() {
                         >
                             SUBMIT
                         </button>
-                    </label>
+                    </div>
 
-                    {/* <label>
-                        <input
-                            className="formSuggestionSubmit"
-                            type="reset"
-                            name="reset"
-                            value="RESET"
-                        />
-                    </label> */}
+                    {suggestionSubmitted && <div className="suggestionSubmitted">
+                        SUGGESTION SUBMITTED!
+                    </div>}
                 </fieldset>
             </form>
+            </div>
         </>
    );
    

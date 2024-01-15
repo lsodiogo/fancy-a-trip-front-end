@@ -1,5 +1,7 @@
 import { Link } from "wouter";
 
+
+
 function NotFoundView() {
     
     return (

@@ -1,5 +1,7 @@
 import { Link, useRoute } from "wouter";
 
+
+
 function Header() {
 
    // FUNCTION TO ADD CSS WHEN LINK IS ACTIVE //
@@ -26,7 +28,7 @@ function Header() {
                </LinkActivated>
 
                <LinkActivated href="/alltrips">
-                  <img src="/images/suitcase.svg" alt="suitcase-icon"/>
+                  <img src="/images/pinmap.svg" alt="map-pinned-icon"/>
                   <span> ALL TRIPS</span>
                </LinkActivated>
                

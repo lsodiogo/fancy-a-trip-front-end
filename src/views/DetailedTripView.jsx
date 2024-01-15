@@ -5,11 +5,11 @@ import DetailedMapContainer from "../components/DetailedMapContainer";
 import WeatherContainer from "../components/WeatherContainer";
 import Slider from "../components/Slider";
 
+
+
 function DetailedTripView({pathParams}) {
    
    const [detailedTripData, setDetailedTripData] = useState({});
-   const [currentWeatherInfo, setCurrentWeatherInfo] = useState({});
-   const [forecastWeatherInfo, setForecastWeatherInfo] = useState([]);
 
    useEffect(function() {
 
@@ -26,33 +26,6 @@ function DetailedTripView({pathParams}) {
          };
 
          setDetailedTripData(foundElement);
-
-
-
-         const urlCurrentWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${foundElement.lat}&lon=${foundElement.lon}&exclude=current&units=metric&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a`;
-
-         const responseWeatherAPI = await fetch(urlCurrentWeatherAPI);
-         const resultWeatherAPI = await responseWeatherAPI.json();
-
-         setCurrentWeatherInfo(resultWeatherAPI);
-
-
-
-         const urlForecastWeatherAPI = `https://api.openweathermap.org/data/2.5/forecast?&lat=${foundElement.lat}&lon=${foundElement.lon}&exclude=current&units=metric&appid=41d23e31b9dc8e5bd9d8a5d5f190be2a`;
-
-         const responseWeatherAPI2 = await fetch(urlForecastWeatherAPI);
-         const resultWeatherAPI2 = await responseWeatherAPI2.json();
-
-         const newResult = [
-            resultWeatherAPI2.list[7],
-            resultWeatherAPI2.list[15],
-            resultWeatherAPI2.list[23],
-            resultWeatherAPI2.list[31],
-            resultWeatherAPI2.list[39]
-         ];
-
-         setForecastWeatherInfo(newResult);
-
       })();
    }, []);
 
@@ -70,9 +43,23 @@ function DetailedTripView({pathParams}) {
       };
    };
 
+
+
+   // CONDITIONAL RENDERING TO AVOID RACE CONDITION //
+   function checkCoordinatesForWeather() {
+      if ((detailedTripData.lat && detailedTripData.lon) != undefined) {
+         return (
+            <WeatherContainer
+               key={detailedTripData.id}
+               detailedTripData={detailedTripData}
+            /> 
+         );
+      };
+   };
+
    return (
       <>
-         <div className="mainContainerDetailedPage">
+         <div className="mainContainerDetailedPage">           
             <div className="titleDetailedPage">
                <h1>{detailedTripData.destination?.city}, {detailedTripData.destination?.country}</h1>
                <p><img src="/images/departure.svg" alt="departure-icon"/> {detailedTripData.checkin}</p>
@@ -91,17 +78,12 @@ function DetailedTripView({pathParams}) {
                   {detailedTripData.description}
                </div>
 
-               <WeatherContainer
-                  key={currentWeatherInfo.id}
-                  detailedTripData={detailedTripData}
-                  currentWeatherInfo={currentWeatherInfo}
-                  forecastWeatherInfo={forecastWeatherInfo}
-               />
+               {checkCoordinatesForWeather()}         
             </div>
+         </div>
 
-            <div>
-               {checkCoordinatesForMap()}
-            </div>
+         <div>
+            {checkCoordinatesForMap()}
          </div>
       </>
    );

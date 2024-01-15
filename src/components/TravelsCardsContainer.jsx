@@ -4,6 +4,8 @@ import { Link } from "wouter";
 import mockAPIService from "../services/mockAPIService";
 import TravelCards from "./TravelCards";
 
+
+
 function TravelsCardsContainer() {
 
    const [travelData, setTravelData] = useState([]);
@@ -17,7 +19,7 @@ function TravelsCardsContainer() {
    }, []);
 
    const sortedFilteredTravelData = (travelData
-      .sort((a,b) => a.checkin < b.checkin ? 1:-1)
+      .sort((a,b) => a.checkin < b.checkin ? 1 : -1)
       .slice(0,3)
    );
 
@@ -32,7 +34,7 @@ function TravelsCardsContainer() {
 
             <Link href="/alltrips">
                <div className="travelCard">
-                  <img className="travelCardSearch" src="/images/search.svg" alt="search-icon"/>
+                  <img className="travelCardSeeMore" src="/images/pinmap.svg" alt="map-pinned-icon"/>
                   <div className="cardInfo">
                      <p>SEE MORE</p>
                   </div>

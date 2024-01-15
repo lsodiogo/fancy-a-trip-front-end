@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 
+
 function TravelCards({travelData}) {
    
    return (

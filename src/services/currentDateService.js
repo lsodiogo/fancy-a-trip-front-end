@@ -1,4 +1,4 @@
-function GetCurrentDate() { 
+function getCurrentDate() { 
 
    const weekdayArray = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
 
@@ -17,13 +17,11 @@ function GetCurrentDate() {
    };
 
    let dateFormat = `${year}-${month}-${day}, ${weekday}`;
-   
-   return (
-      <>
-        {dateFormat}
-      </>
-   );
+
+   return dateFormat;
    
 };
 
-export default GetCurrentDate;
+export default {
+   getCurrentDate
+};

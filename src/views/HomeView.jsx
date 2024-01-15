@@ -2,6 +2,8 @@ import Hero from "../components/Hero";
 import TravelsCardsContainer from "../components/TravelsCardsContainer";
 import MapContainer from "../components/MapContainer";
 
+
+
 function HomeView() {
    
    return (
