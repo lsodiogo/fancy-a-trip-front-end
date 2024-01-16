@@ -938,6 +938,7 @@ a.header-left:hover {
    .aboutText {
       display: block;
       width: 100%;
+      font-weight: bold;
    }
    .aboutText > h1 {
       font-size: 10px;
