@@ -44,10 +44,10 @@ function AllTripsView() {
          <div className="mainContainerAllTripsPage">
             <div className="sortButton">
                <select value={sortOption} onChange={handleSortOptionChange}>
-                  <option value="default">FILTER BY DEFAULT</option>
-                  <option value="country">BY COUNTRY (A-Z)</option>
-                  <option value="city">BY CITY (A-Z)</option>
-                  <option value="date">BY LASTEST</option>
+                  <option value="default">SORT BY DEFAULT</option>
+                  <option value="country">SORT BY COUNTRY (A-Z)</option>
+                  <option value="city">SORT BY CITY (A-Z)</option>
+                  <option value="date">SORT BY LASTEST</option>
                </select>
             </div>
 
