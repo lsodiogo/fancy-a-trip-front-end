@@ -11,7 +11,9 @@ function AllTripsView() {
       (async function() {
          const result = await mockAPIService.getTravelDataList();
          
-         setTravelData(result);
+         const sorted = result.sort((a,b) => a.checkin < b.checkin ? 1 : -1);
+         
+         setTravelData(sorted);
       })();
    }, []);
 
@@ -27,7 +29,6 @@ function AllTripsView() {
 
       } else if (sortOption === "city") {
          setTravelData([...travelData.sort((a, b) => a.destination.city > b.destination.city ? 1 : -1)]);
-
       };
    }, [sortOption]);
 
