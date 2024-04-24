@@ -6,7 +6,7 @@ function Hero() {
             <div className="homepageHeroInfo">
                <img src="/images/paris.jpg" alt="paris"/>
                <img src="/images/travel.jpg" alt="travel-tools"/>
-               <img src="/images/rollercoaster.jpeg" alt="rollercoaster"/>
+               <img src="/images/rollercoaster.jpg" alt="rollercoaster"/>
                
                <p>DO YOU FANCY A TRIP?</p>
 

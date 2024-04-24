@@ -418,6 +418,13 @@ a.header-left:hover {
    background-color: var(--hover-color);
    color: var(--white-color);
 }
+
+@media screen and (max-width: 600px) {
+   .sortButton select {
+      width: 50%;
+      font-size: 10px;
+   }
+}
 /* -------------------------------------------------- */
 
 

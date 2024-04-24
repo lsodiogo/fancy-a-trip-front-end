@@ -5,7 +5,7 @@ import TravelCards from "../components/TravelCards";
 
 function AllTripsView() {
    const [travelData, setTravelData] = useState([]);
-   const [sortOption, setSortOption] = useState("default");
+   const [sortOption, setSortOption] = useState("date");
 
    useEffect(function() {
       (async function() {
@@ -19,8 +19,8 @@ function AllTripsView() {
 
    // FUNCTION TO SORT ALL TRIPS WHEN BUTTON SELECTED //
    useEffect(function() {
-      if (sortOption === "default") {
-         setTravelData([...travelData.sort((a, b) => a.id > b.id ? 1 : -1)]);
+      if (sortOption === "date") {
+         setTravelData([...travelData.sort((a, b) => a.checkin < b.checkin ? 1 : -1)]);  
 
       } else if (sortOption === "country") {
          setTravelData([...travelData.sort((a, b) => a.destination.country > b.destination.country ? 1 : -1)]);
@@ -28,9 +28,7 @@ function AllTripsView() {
       } else if (sortOption === "city") {
          setTravelData([...travelData.sort((a, b) => a.destination.city > b.destination.city ? 1 : -1)]);
 
-      } else if (sortOption === "date") {
-         setTravelData([...travelData.sort((a, b) => a.checkin < b.checkin ? 1 : -1)]);  
-      }
+      };
    }, [sortOption]);
 
 
@@ -44,10 +42,9 @@ function AllTripsView() {
          <div className="mainContainerAllTripsPage">
             <div className="sortButton">
                <select value={sortOption} onChange={handleSortOptionChange}>
-                  <option value="default">SORT BY DEFAULT</option>
+                  <option value="date">SORT BY LASTEST</option>
                   <option value="country">SORT BY COUNTRY (A-Z)</option>
                   <option value="city">SORT BY CITY (A-Z)</option>
-                  <option value="date">SORT BY LASTEST</option>
                </select>
             </div>
 

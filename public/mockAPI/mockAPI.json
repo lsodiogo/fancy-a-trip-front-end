@@ -16,9 +16,9 @@
             "lon": -8.629105,
             "description": "Porto, located in northern Portugal, is a charming city known for its colourful streets, magnificent architecture, and world-famous wine. \n With its stunning riverside location, historic landmarks such as the Dom Luís I Bridge and the Ribeira District, and a vibrant food scene, Porto is a delightful destination for any traveler seeking a mix of culture, history, and culinary delights.",
             "sliderIMG": [
-               "/images/porto1.jpeg",
-               "/images/porto2.jpeg",
-               "/images/porto3.jpeg"
+               "/images/porto1.jpg",
+               "/images/porto2.jpg",
+               "/images/porto3.jpg"
             ]
          },
          {
@@ -36,9 +36,9 @@
             "lon": -9.136592,
             "description": "Lisbon, the capital city of Portugal, offers a perfect blend of old-world charm and modern vibrancy. \n This enchanting city is renowned for its picturesque streets, iconic yellow trams, and breathtaking views from its numerous viewpoints. \n With its rich history, stunning landmarks like the Belém Tower and Jerónimos Monastery, lively neighbourhoods such as Alfama and Bairro Alto, as well as delectable Portuguese cuisine, Lisbon is a captivating destination for every explorer.",
             "sliderIMG": [
-               "/images/lisbon1.jpeg",
-               "/images/lisbon2.jpeg",
-               "/images/lisbon3.jpeg"
+               "/images/lisbon1.jpg",
+               "/images/lisbon2.jpg",
+               "/images/lisbon3.jpg"
             ]
          },
          {
@@ -56,9 +56,9 @@
             "lon": 4.351697,
             "description": "As the heart of Europe, Brussels captivates visitors with its unique blend of history, culture, and international allure. \n Famous for its stunning architecture, including the iconic Atomium and the Grand Place, this multicultural city is also home to the European Parliament and an abundance of museums and art galleries. \n Visitors can indulge in world-class chocolate, waffles, and beer, while exploring the charming streets of the city's diverse neighbourhoods.",
             "sliderIMG": [
-               "/images/brussels1.jpeg",
-               "/images/brussels2.jpeg",
-               "/images/brussels3.jpeg"
+               "/images/brussels1.jpg",
+               "/images/brussels2.jpg",
+               "/images/brussels3.jpg"
             ]
          },
          {
@@ -76,9 +76,9 @@
             "lon": -6.260273,
             "description": "Dublin, the lively capital of Ireland, combines rich history with a vibrant atmosphere. \n With its literary heritage, including connections to renowned writers such as James Joyce and Oscar Wilde, the city offers a multitude of literary landmarks and bustling pubs where traditional Irish music fills the air. \n From exploring the historic Trinity College and strolling along the beautiful River Liffey to experiencing the warm Irish hospitality, Dublin promises an unforgettable experience for all.",
             "sliderIMG": [
-               "/images/dublin1.jpeg",
-               "/images/dublin2.jpeg",
-               "/images/dublin3.jpeg"
+               "/images/dublin1.jpg",
+               "/images/dublin2.jpg",
+               "/images/dublin3.jpg"
             ]
          },
          {
@@ -96,9 +96,9 @@
             "lon": 2.352222,
             "description": "Paris, the ''City of Love,'' is a dream destination for many travelers. \n With its world-famous landmarks like the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral, the city exudes an undeniable charm. \n Whether it's wandering through the charming neighbourhoods of Montmartre or Le Marais, indulging in exquisite French cuisine, or simply enjoying a leisurely stroll along the Seine River, Paris offers an unparalleled experience with its art, culture, and romantic atmosphere.",
             "sliderIMG": [
-               "/images/paris1.jpeg",
-               "/images/paris2.jpeg",
-               "/images/paris3.jpeg"
+               "/images/paris1.jpg",
+               "/images/paris2.jpg",
+               "/images/paris3.jpg"
             ]
          },
          {
@@ -116,9 +116,9 @@
             "lon": -3.703582,
             "description": "Madrid, the vibrant capital of Spain, impresses visitors with its elegant boulevards, stunning architecture, and world-class museums. \n Home to the iconic Plaza Mayor, the sprawling Royal Palace, and three internationally renowned art museums called the Golden Triangle, Madrid offers a captivating blend of history, culture, and cosmopolitan flair. \n From savouring delicious tapas to experiencing thrilling flamenco shows, Madrid invites travelers to immerse themselves in the lively Spanish lifestyle.",
             "sliderIMG": [
-               "/images/madrid1.jpeg",
-               "/images/madrid2.jpeg",
-               "/images/madrid3.jpeg"
+               "/images/madrid1.jpg",
+               "/images/madrid2.jpg",
+               "/images/madrid3.jpg"
             ]
          },
          {
@@ -136,9 +136,9 @@
             "lon": 2.168568,
             "description": "Barcelona, the enchanting coastal city in northeastern Spain, is a mosaic of art, architecture, and vibrant street life. \n With its awe-inspiring landmarks like the majestic Sagrada Familia, Park Güell, and Gothic Quarter, Barcelona seamlessly blends the avant-garde with its rich history. \n Visitors can soak up the sun on its beautiful beaches, indulge in world-class Catalan cuisine, or explore the bustling La Boqueria market. \n Barcelona's energetic atmosphere and unique blend of Catalan culture make it a must-visit destination.",
             "sliderIMG": [
-               "/images/barcelona1.jpeg",
-               "/images/barcelona2.jpeg",
-               "/images/barcelona3.jpeg"
+               "/images/barcelona1.jpg",
+               "/images/barcelona2.jpg",
+               "/images/barcelona3.jpg"
             ]
          },
          {
@@ -156,9 +156,9 @@
             "lon": 18.071093,
             "description": "Stockholm, the capital of Sweden, is known for its striking beauty, surrounded by an archipelago of islands. \n This elegant city offers a harmonious blend of medieval and modern architecture, from the historic Gamla Stan to the trendy Södermalm district. \n Visitors can explore world-class museums, admire stunning royal palaces, or simply relax in one of the many waterfront cafes. \n With its clean, green spaces and innovative design, Stockholm never fails to impress travelers seeking a mix of Scandinavian charm and urban sophistication.",
             "sliderIMG": [
-               "/images/stockholm1.jpeg",
-               "/images/stockholm2.jpeg",
-               "/images/stockholm3.jpeg"
+               "/images/stockholm1.jpg",
+               "/images/stockholm2.jpg",
+               "/images/stockholm3.jpg"
             ]
          },
          {
@@ -176,9 +176,9 @@
             "lon": 8.305468,
             "description": "Located in the heart of Switzerland, Luzern is a picturesque city surrounded by snow-capped mountains and crystal-clear lakes. \n Its well-preserved medieval architecture, including the iconic Chapel Bridge, blends seamlessly with modern amenities and a lively cultural scene. \n Visitors can enjoy breathtaking views from Mount Pilatus or Rigi, take a leisurely boat ride on Lake Lucerne, or simply wander through the city's charming cobblestone streets. \n Luzern is a tranquil and stunning destination for those looking to immerse themselves in Switzerland's natural beauty.",
             "sliderIMG": [
-               "/images/luzern1.jpeg",
-               "/images/luzern2.jpeg",
-               "/images/luzern3.jpeg"
+               "/images/luzern1.jpg",
+               "/images/luzern2.jpg",
+               "/images/luzern3.jpg"
             ]
          },
          {
@@ -196,9 +196,9 @@
             "lon": 7.013442,
             "description": "Cannes, situated along the French Riviera, exudes elegance and glamour. \n Known for its prestigious film festival, this seaside resort town offers beautiful sandy beaches, luxurious boutiques, and a lively promenade lined with palm trees. \n Visitors can soak up the sun on the famous Croisette, admire stunning yachts in the harbour, or explore the historic Le Suquet neighbourhood. \n Whether indulging in delightful Provençal cuisine or enjoying a vibrant nightlife, Cannes promises a sophisticated and unforgettable experience.",
             "sliderIMG": [
-               "/images/cannes1.jpeg",
-               "/images/cannes2.jpeg",
-               "/images/cannes3.jpeg"
+               "/images/cannes1.jpg",
+               "/images/cannes2.jpg",
+               "/images/cannes3.jpg"
             ]
          },
          {
@@ -216,9 +216,9 @@
             "lon": -8.470581,
             "description": "Cork, located on the southwest coast of Ireland, is a charming city with a unique blend of traditional Irish charm and modern culture. \n With its lively pubs, historic sites like the iconic St. Fin Barre's Cathedral, and vibrant English Market, Cork offers visitors a taste of true Irish hospitality. \n Explore the narrow streets of the city's creative quarter, sample local whiskies and craft beers, or venture to the stunning coastline and landscapes of County Cork. \n Cork is a captivating destination that showcases the very best of Ireland.",
             "sliderIMG": [
-               "/images/cork1.jpeg",
-               "/images/cork2.jpeg",
-               "/images/cork3.jpeg"
+               "/images/cork1.jpg",
+               "/images/cork2.jpg",
+               "/images/cork3.jpg"
             ]
          },
          {
@@ -236,9 +236,9 @@
             "lon": 26.10272,
             "description": "Bucharest, the capital city of Romania, is a vibrant metropolis filled with contrasts. \n From its mix of architectural styles, including the grand Palace of the Parliament and the old-world charm of Lipscani Quarter, to its trendy cafes and bustling nightlife, Bucharest offers a diverse and captivating experience. \n Visitors can explore the city's rich history, delve into its thriving arts and culture scene, or simply enjoy Romanian cuisine in one of its many lively restaurants. \n Bucharest is a city full of surprises, waiting to be discovered.",
             "sliderIMG": [
-               "/images/bucharest1.jpeg",
-               "/images/bucharest2.jpeg",
-               "/images/bucharest3.jpeg"
+               "/images/bucharest1.jpg",
+               "/images/bucharest2.jpg",
+               "/images/bucharest3.jpg"
             ]
          }
       ]

@@ -1,5 +1,5 @@
 import * as React from "react";
-import  Map, { Marker, NavigationControl } from "react-map-gl";
+import  Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import mapZoomQueryScreenSize from "../services/mapZoomQueryScreenSize";
