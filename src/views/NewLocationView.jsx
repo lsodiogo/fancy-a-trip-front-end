@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import countriesAPIService from "../services/countriesAPIService";
 
@@ -102,7 +102,7 @@ function NewLocationView() {
 
     
     // CONDITION TO CHANGE INPUT BOX COLOR WHEN FIELD IN BLANK //
-    const backgroundCountryEmpty = fieldsRequired && formData.country === "" ? "formSuggestionInput backgroundFieldsRequired" : "formSuggestionInput";
+    const backgroundCountryEmpty = useMemo(() => fieldsRequired && formData.country === "" ? ["formSuggestionInput backgroundFieldsRequired"] : ["formSuggestionInput"] ,[fieldsRequired, formData.country]);
 
     const backgroundCityEmpty = (fieldsRequired && formData.country === "") || (fieldsRequired && formData.city === "" && formData.country) ? "formSuggestionInput backgroundFieldsRequired" : "formSuggestionInput";
 
